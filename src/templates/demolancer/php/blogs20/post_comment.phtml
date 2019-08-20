@@ -1,0 +1,29 @@
+<?php
+/**
+ * Комментарий поста блога
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$id = isset($variables['cid']) ? $this->escape($variables['cid']) : null;
+$date = isset($variables['publish_time']) ? date('Y.m.d H:i:s', $variables['publish_time']) : null;
+$blockId = $this->escape(sprintf('comment_%s', $id));
+$title = isset($variables['name']) ? $this->escape($variables['name']) : null;
+$authorId = isset($variables['author_id']) ? $this->escape($variables['author_id']) : null;
+$content = isset($variables['content']) ? $this->escape($variables['content']) : null;
+?>
+<div class="comment" umi:element-id="<?= $id ?>" umi:delete="delete">
+	<a name="<?= $blockId ?>" id="<?= $blockId ?>"></a>
+	<div class="comment_date comment_date_top" umi:field-name="publish_time" umi:empty="<?= $this->escape($this->translate('empty_comment_date')) ?>">
+		<?= $date ?>
+	</div>
+	<div class="comment_title h3">
+		<span class="comment_author"><?= $this->getCommentAuthorName($authorId) ?>:</span>
+		<span class="comment_title" umi:field-name="name" umi:empty="<?= $this->escape($this->translate('empty_comment_header')) ?>">
+			<?= $title ?>
+		</span>
+	</div>
+	<div class="text" umi:field-name="message" umi:empty="<?= $this->escape($this->translate('empty_comment_content')) ?>">
+		<?= $content ?>
+	</div>
+</div>

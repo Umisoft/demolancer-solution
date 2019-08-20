@@ -1,0 +1,46 @@
+<?php
+/**
+ * Контент главной страницы
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ * @var iUmiHierarchyElement $page
+ */
+$page = $this->getPageAndPushToEditable($variables['pageId']);
+$id = $this->escape($page->getId());
+$photoAlbumPage = getFirstValue($page->getValue('photo_block_source'));
+?>
+<div class="container mt20 mb20">
+	<div class="pr_block">
+		<div class="text custom_block_2" umi:element-id="<?= $id ?>" umi:field-name="first_text_block"
+		umi:empty="<?= $this->escape($this->translate('empty_main_page_first_text_block')) ?>">
+			<?= $page->getValue('first_text_block'); ?>
+		</div>
+	</div>
+	<div class="index_text_content text" umi:element-id="<?= $id ?>" umi:field-name="content"
+		 umi:empty="<?= $this->escape($this->translate('empty_page_content')) ?>">
+		<?= $page->getValue('content'); ?>
+	</div>
+	<div class="photoalbum_index">
+		<div class="mainpage_albums_title h2">
+			<span class="h2_content" umi:element-id="<?= $id ?>" umi:field-name="mainpage_albums_title"
+				umi:empty="<?= $this->escape($this->translate('empty_main_page_photo_block_header')) ?>">
+				<?= $this->escape($page->getValue('photo_block_header')) ?>
+			</span>
+		</div>
+		<?php if ($photoAlbumPage instanceof iUmiHierarchyElement): ?>
+			<?= $this->render($this->macros('photoalbum', 'album', [$photoAlbumPage->getId()]), 'photoalbum/photo_list') ?>
+			<div class="show_all show_all_photoalbum">
+				<a umi:element-id="<?= $id ?>" umi:field-name="mainpage_albums_show_all"
+				   href="<?= $this->getPath($photoAlbumPage) ?>" umi:empty="<?= $this->escape($this->translate('empty_main_page_photo_block_link_text')) ?>">
+					<?= $this->escape($page->getValue('photo_block_link_text')) ?>
+				</a>
+			</div>
+		<?php endif; ?>
+	</div>
+	<div class="cleaner"></div>
+	<div class="seo_text text" umi:element-id="<?= $id ?>" umi:field-name="additional_content"
+		 umi:empty="<?= $this->escape($this->translate('empty_additional_content')) ?>">
+		<?= $page->getValue('additional_content'); ?>
+	</div>
+</div>

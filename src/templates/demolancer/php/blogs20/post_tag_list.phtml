@@ -1,0 +1,26 @@
+<?php
+/**
+ * Список тегов поста в списке
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$maxIndex = count($variables) - 1;
+$hasTags = count($variables) > 0;
+?>
+<div class="tags">
+<?php if ($hasTags) : ?>
+	(
+<?php endif; ?>
+	<span umi:field-name="tags" umi:empty="<?= $this->escape($this->translate('empty_post_tags')) ?>">
+		<?php foreach ($variables as $index => $tag): ?>
+			<?= $this->render($tag, 'blogs20/post_tag') ?>
+			<?php if ($maxIndex !== $index) : ?>
+				,
+			<?php endif; ?>
+		<?php endforeach; ?>
+	</span>
+<?php if ($hasTags) : ?>
+	)
+<?php endif; ?>
+</div>

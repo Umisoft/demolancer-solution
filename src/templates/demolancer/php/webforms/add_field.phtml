@@ -1,0 +1,31 @@
+<?php
+/**
+ * Поле формы обратной связи
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$title = isset($variables['title']) ? $this->escape($variables['title']) : '';
+$isRequired = (isset($variables['required']) && $variables['required'] === 'required');
+$inputName = isset($variables['input_name']) ? $this->escape($variables['input_name']) : '';
+$isEmail = isset($variables['restriction']) && $variables['restriction'] === 'email';
+?>
+<div class="<?= $this->escape($this->getWebFormFieldContainerCssClass($variables)) ?>">
+	<label>
+		<span>
+			<?= sprintf('%s:', $title) ?>
+			<?php if ($isRequired): ?>
+				<span class="required_star" title="<?= $this->escape($this->translate('required_field_label')) ?>">
+					<span class="required_star_text">*</span>
+				</span>
+			<?php endif; ?>
+		</span>
+	</label>
+	<div class="<?= $this->escape($this->getWebFormInputContainerCssClass($variables)) ?>">
+		<?php if (isset($variables['type']) && $variables['type'] === 'text'): ?>
+			<textarea name="<?= $inputName ?>" <?= $isRequired ? 'required' : '' ?>></textarea>
+		<?php else: ?>
+			<input name="<?= $inputName ?>" value="" type="<?= $isEmail ? 'email' : 'text' ?>" <?= $isRequired ? 'required' : '' ?>>
+		<?php endif; ?>
+	</div>
+</div>

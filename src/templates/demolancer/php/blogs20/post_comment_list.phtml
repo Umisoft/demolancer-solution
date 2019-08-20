@@ -1,0 +1,23 @@
+<?php
+/**
+ * Список комментариев поста блога
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$commentList = isset($variables['items']) ? $variables['items'] : [];
+?>
+<?php if (count($commentList) > 0): ?>
+	<div class="comments_h2 h2">
+		<div>
+			<strong>
+				<?= $this->escape($this->translate('label_comments')) ?>
+			</strong>
+		</div>
+	</div>
+	<div class="comments_list">
+		<?php foreach ($commentList as $comment): ?>
+			<?= $this->render($comment, 'blogs20/post_comment') ?>
+		<?php endforeach; ?>
+	</div>
+<?php endif; ?>
