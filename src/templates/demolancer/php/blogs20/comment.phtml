@@ -1,0 +1,30 @@
+<?php
+/**
+ * Комментарий к посту блога
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ * @var iUmiHierarchyElement $page
+ */
+$page = $this->getPageAndPushToEditable($variables['pageId']);
+$id = $this->escape($page->getId());
+?>
+<div class="container">
+	<?= $this->render($this->macros('core', 'navibar'), 'core/navibar') ?>
+	<div class="row-fluid umi-second-content">
+		<h1 id="page_main_header" class="h1">
+			<span class="h1_content" umi:element-id="<?= $id ?>" umi:field-name="h1"
+				  umi:empty="<?= $this->escape($this->translate('empty_comment_header')) ?>"><?= $this->escape($page->getName()) ?></span>
+		</h1>
+		<div class="seo_text text" umi:element-id="<?= $id ?>" umi:field-name="content"
+			 umi:empty="<?= $this->escape($this->translate('empty_comment_content')) ?>">
+			<?= $page->getValue('content') ?>
+		</div>
+		<div class="cleaner"></div>
+		<div class="seo_text text" umi:element-id="<?= $id ?>" umi:field-name="additional_content"
+			 umi:empty="<?= $this->escape($this->translate('empty_additional_content')) ?>">
+			<?= $page->getValue('additional_content'); ?>
+		</div>
+	</div>
+</div>
+

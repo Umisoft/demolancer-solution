@@ -1,0 +1,51 @@
+<?php
+/**
+ * Шапка сайта
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+?>
+<div class="row-fluid for-main-header">
+	<div class="span12 prel">
+		<div class="cover-one"></div>
+		<div class="container">
+			<div class="row-fluid umi-header">
+				<div class="span12">
+					<div class="head_wr">
+						<div class="head_search">
+							<?= $this->render($this->macros('search', 'insert_form'), 'search/insert_form') ?>
+						</div>
+						<div class="head_logo_wr">
+							<?= $this->render($variables, 'layout/header/text') ?>
+						</div>
+						<div class="head_img_wr">
+							<?= $this->render($variables, 'layout/header/image') ?>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="head_search_second mainer">
+				<?= $this->render($this->macros('search', 'insert_form'), 'search/insert_form') ?>
+			</div>
+		</div>
+	</div>
+</div>
+<div class="row-fluid for-menu">
+	<div class="span12 prel">
+		<div class="cover-two"></div>
+		<div class="container">
+			<div class="row-fluid umi-menu">
+				<div class="span12">
+					<div class="navbar">
+						<div class="navbar-inner">
+							<div class="container">
+								<?= $this->render($this->getMenu(), 'content/menu') ?>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

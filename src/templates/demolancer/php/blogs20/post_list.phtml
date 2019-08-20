@@ -1,0 +1,17 @@
+<?php
+/**
+ * Список постов заданного блога
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$postList = isset($variables['items']) ? $variables['items'] : [];
+$blogId = isset($variables['bid']) ? $this->escape($variables['bid']) : null;
+?>
+<div class="blog" umi:element-id="<?= $blogId ?>" umi:module="blogs20" umi:method="postsList" umi:region="list"
+	 mi:sortable="sortable" umi:button-position="top right">
+	<?php foreach ($postList as $post): ?>
+		<?= $this->render($post, 'blogs20/post_list_item') ?>
+	<?php endforeach; ?>
+</div>
+<?= $this->render($this->macros('system', 'numpages', [$variables['total'], $variables['per_page']]), 'system/numpages') ?>

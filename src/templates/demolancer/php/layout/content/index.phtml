@@ -1,0 +1,14 @@
+<?php
+/**
+ * Основной контент страницы.
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+?>
+<div class="row-fluid for-content">
+	<div class="span12 prel">
+		<?= $this->render($this->macros('system', 'listErrorMessages'), 'system/error_list') ?>
+		<?= $this->render($variables, "{$variables['module']}/{$variables['method']}") ?>
+	</div>
+</div>

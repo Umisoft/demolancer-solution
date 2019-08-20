@@ -1,0 +1,44 @@
+<?php
+/**
+ * Пост блога
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ * @var iUmiHierarchyElement $page
+ */
+$page = $this->getPageAndPushToEditable($variables['pageId']);
+$id = $this->escape($page->getId());
+$tagList = $this->macros('blogs20', 'getPostTags', [$id]);
+$tagList = isset($tagList['tags']) ? $tagList['tags'] : [];
+?>
+<div class="container">
+	<?= $this->render($this->macros('core', 'navibar'), 'core/navibar') ?>
+	<div class="row-fluid umi-second-content">
+		<div umi:element-id="<?= $id ?>" class="blog">
+			<?= $this->render($tagList, 'blogs20/post_tag_list') ?>
+			<h1 id="page_main_header" class="h1">
+				<span class="h1_content" umi:field-name="h1"
+				  umi:empty="<?= $this->escape($this->translate('empty_page_h1')) ?>"><?= $this->escape($page->getValue('h1')) ?>
+				</span>
+			</h1>
+			<div class="text" umi:field-name="content"
+				 umi:empty="<?= $this->escape($this->translate('empty_post_preview')) ?>">
+				<?= $page->getValue('content') ?>
+			</div>
+			<div class="text" umi:field-name="main_content"
+				 umi:empty="<?= $this->escape($this->translate('empty_page_content')) ?>">
+				<?= $page->getValue('main_content'); ?>
+			</div>
+			<div class="comments">
+				<a name="comments" id="comments"></a>
+				<?= $this->render($this->macros('blogs20', 'commentsList', [$id]), 'blogs20/post_comment_list') ?>
+				<?= $this->render($this->macros('blogs20', 'commentAdd', [$id]), 'blogs20/post_comment_form') ?>
+			</div>
+			<div class="cleaner"></div>
+			<div class="seo_text text" umi:field-name="additional_content"
+				 umi:empty="<?= $this->escape($this->translate('empty_additional_content')) ?>">
+				<?= $page->getValue('additional_content'); ?>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,21 @@
+<?php
+/**
+ * Набор текстовых полей в шапке сайта
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$settings = $this->getSettingsContainer();
+$id = $this->escape($settings->getId());
+?>
+<div class="head_logo" umi:object-id="<?= $id ?>" umi:field-name="name" umi:empty="<?= $this->escape($this->translate('empty_name')) ?>">
+	<?= $this->escape($settings->getValue('name')) ?>
+</div>
+<div class="head_gan" umi:object-id="<?= $id ?>" umi:field-name="position" umi:empty="<?= $this->escape($this->translate('empty_position')) ?>">
+	<?= $this->escape($settings->getValue('position')) ?>
+</div>
+<div class="head_slog">
+	<div class="text custom_block_1" umi:object-id="<?= $id ?>" umi:field-name="description" umi:empty="<?= $this->escape($this->translate('empty_description')) ?>">
+		<?= $settings->getValue('description') ?>
+	</div>
+</div>

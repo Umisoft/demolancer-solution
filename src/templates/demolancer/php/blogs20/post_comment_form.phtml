@@ -1,0 +1,84 @@
+<?php
+/**
+ * Форма добавление комментария к посту блога
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$postId = isset($variables['parent_id']) ? $this->escape($variables['parent_id']) : null;
+?>
+<?php if ($postId): ?>
+	<div class="comments_form_div">
+		<a name="add-comment" id="add-comment"></a>
+		<div class="comment_add_form_h2 h2">
+			<?= $this->escape($this->translate('label_add_comment')) ?>
+		</div>
+		<form class="site_form comments_form" method="post" action="/blogs20/commentAdd/<?= $postId ?>/">
+			<fieldset>
+				<div class="left_side">
+					<div class="field field_title">
+						<label>
+						<span>
+							<?= $this->escape($this->translate('label_comment_header')) ?>
+						</span>
+							<span class="required_star" title="<?= $this->escape($this->translate('required_field_label')) ?>">
+							<span class="required_star_text">*</span>
+						</span>
+						</label>
+						<div class="field_div input">
+							<input type="text" name="title" required>
+						</div>
+					</div>
+					<?php if ($this->isGuest()): ?>
+						<div class="field field_author_nick">
+							<label>
+							<span>
+								<?= $this->escape($this->translate('label_comment_author_name')) ?>
+							</span>
+								<span class="required_star" title="<?= $this->escape($this->translate('required_field_label')) ?>">
+								<span class="required_star_text">*</span>
+							</span>
+							</label>
+							<div class="field_div input">
+								<input type="text" name="nick" required>
+							</div>
+						</div>
+						<div class="field field_author_email">
+							<label>
+							<span>
+								<?= $this->escape($this->translate('label_comment_author_email')) ?>
+							</span>
+								<span class="required_star" title="<?= $this->escape($this->translate('required_field_label')) ?>">
+								<span class="required_star_text">*</span>
+							</span>
+							</label>
+							<div class="field_div input">
+								<input type="email" name="email" required>
+							</div>
+						</div>
+					<?php endif; ?>
+					<div class="field field_comment">
+						<label>
+						<span>
+							<?= $this->escape($this->translate('label_comment_content')) ?>
+						</span>
+							<span class="required_star" title="<?= $this->escape($this->translate('required_field_label')) ?>">
+							<span class="required_star_text">*</span>
+						</span>
+						</label>
+						<div class="field_div textarea">
+							<textarea name="content" required></textarea>
+						</div>
+					</div>
+					<?= $this->render($this->macros('system', 'captcha'), 'system/captcha') ?>
+				</div>
+				<?= $this->render($variables, 'system/personal_data_policy') ?>
+			</fieldset>
+			<fieldset>
+				<div class="submit">
+					<input type="submit" class="all_system_buttons" value="<?= $this->escape($this->translate('label_comment_add_button')) ?>">
+				</div>
+			</fieldset>
+		</form>
+	</div>
+<?php endif; ?>

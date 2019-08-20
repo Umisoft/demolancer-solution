@@ -1,0 +1,39 @@
+<?php
+/**
+ * Пост в списке
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$id = isset($variables['id']) ? $this->escape($variables['id']) : null;
+$date = isset($variables['publish_time']) ? date('Y.m.d', $variables['publish_time']) : null;
+$link = isset($variables['post_link']) ? $this->escape($variables['post_link']) : null;
+$name = isset($variables['name']) ? $this->escape($variables['name']) : null;
+$anons = isset($variables['cut']) ? $variables['cut'] : null;
+$tagList =isset($variables['tags']) ? $variables['tags'] : [];
+?>
+<div class="blog_item" umi:region="row" umi:element-id="<?= $id ?>" umi:delete="delete">
+	<div class="blog_title">
+		<div class="top_date blog_item_date" umi:field-name="publish_time">
+			<?= $date ?>
+		</div>
+		<a class="post_name" href="<?= $link ?>" umi:field-name="name" umi:empty="<? $this->escape($this->translate('empty_post_name')) ?>">
+			<strong>
+				<?= $name ?>
+			</strong>
+		</a>
+	</div>
+	<div class="text" umi:field-name="content" umi:empty="<?= $this->escape($this->translate('empty_page_content')) ?>">
+		<?= $anons ?>
+	</div>
+	<?= $this->render($tagList, 'blogs20/post_tag_list') ?>
+	<div class="blog_comment">
+		<a href="<?= $link ?>#comments">
+			<?= $this->escape(sprintf($this->translate('comments_count_label'), $variables['comments_count'])) ?>
+		</a>
+		  |
+		<a href="<?= $link ?>#add-comment">
+			<?= $this->escape($this->translate('leave_comment_label')) ?>
+		</a>
+	</div>
+</div>

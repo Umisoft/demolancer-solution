@@ -1,0 +1,22 @@
+<?php
+/**
+ * Скелет сайта.
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+?>
+<!DOCTYPE html>
+<html class="adaptive personal p155">
+	<head>
+		<?= $this->render($variables, 'layout/head') ?>
+	</head>
+	<body>
+		<div class="general_wrap">
+			<?= $this->render($variables, 'layout/header/index') ?>
+			<?= $this->render($variables, 'layout/content/index') ?>
+			<div class="compensator"></div>
+		</div>
+		<?= $this->render($variables, 'layout/footer/index') ?>
+	</body>
+</html>

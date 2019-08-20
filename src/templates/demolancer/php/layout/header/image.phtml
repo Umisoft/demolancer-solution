@@ -1,0 +1,23 @@
+<?php
+/**
+ * Фоновое изображение в шапке сайта
+ *
+ * @var umiTemplaterPHP|ViewPhpExtension|DemolancerPhpExtension $this
+ * @var array $variables
+ */
+$settings = $this->getSettingsContainer();
+$id = $this->escape($settings->getId());
+$imageLink = getFirstValue($settings->getValue('image_link'));
+$linkPath = ($imageLink instanceof iUmiHierarchyElement) ? $this->escape($this->getPath($imageLink)) : '';
+$linkTitle = ($imageLink instanceof iUmiHierarchyElement) ? $this->escape($imageLink->getValue('h1')) : '';
+?>
+<div class="direction_block direction_block_1">
+	<a class="direction_block_link" href="<?= $linkPath ?>" title="<?= $linkTitle ?>">
+		<img umi:object-id="<?= $this->escape($settings->getId()) ?>" umi:field-name="image"
+			 alt="<?= $this->escape($this->getSettingsImageAlt('image')) ?>"
+			 title="<?= $this->escape($this->getSettingsImageTitle('image')) ?>"
+			 src="<?= $this->getSettingsImagePath('image') ?>"
+		>
+		<div class="cleaner"></div>
+	</a>
+</div>
