@@ -1,5 +1,5 @@
 {
-  "name": "Umisoft-demolancer",
+  "name": "demolancer",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
@@ -11,11 +11,11 @@
   "license": "ISC",
   "private": true,
   "devDependencies": {
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.2",
     "gulp-autoprefixer": "^2.1.0",
     "gulp-concat": "^2.4.3",
     "gulp-cssmin": "^0.2.0",
-    "gulp-load-plugins": "^0.8.1",
+    "gulp-load-plugins": "^2.0.1",
     "gulp-minify": "^3.1.0",
     "gulp-plumber": "^0.6.6",
     "gulp-rimraf": "^0.2.2",
