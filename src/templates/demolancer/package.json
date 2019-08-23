@@ -19,8 +19,7 @@
     "gulp-minify": "^3.1.0",
     "gulp-plumber": "^0.6.6",
     "gulp-rimraf": "^0.2.2",
-    "gulp-util": "^3.0.3",
-    "run-sequence": "^2.2.1"
+    "gulp-util": "^3.0.3"
   },
   "dependencies": {
     "package.json": "^2.0.1",

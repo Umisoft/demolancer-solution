@@ -15,7 +15,6 @@ var cssmin = require('gulp-cssmin');
 var jsmin = require('gulp-minify');
 var rename = require('gulp-rename');
 var rimraf = require('gulp-rimraf');
-var runSequence = require('run-sequence');
 
 var jsLibraries = 'js/lib/**/*.js';
 var jsFiles = 'js/*.js';
