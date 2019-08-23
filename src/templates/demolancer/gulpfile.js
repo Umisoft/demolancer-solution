@@ -1,12 +1,17 @@
 /**
  * Сборщик css и js.
  *
- * - Сборка всех ресурсов:
+ * 1) Сборка всех ресурсов:
  * $ npm install
  * $ gulp
  *
  * 2) Режим разработки, ресурсы автоматически пересобираются при сохранении исходных файлов:
  * $ gulp watch
+ *
+ * Требования:
+ * node: 10.15.3
+ * npm: 6.4.1
+ * gulp-cli: 2.2.0
  */
 var gulp = require('gulp');
 var gutil = require('gulp-util');
@@ -15,7 +20,6 @@ var cssmin = require('gulp-cssmin');
 var jsmin = require('gulp-minify');
 var rename = require('gulp-rename');
 var rimraf = require('gulp-rimraf');
-var runSequence = require('run-sequence');
 
 var jsLibraries = 'js/lib/**/*.js';
 var jsFiles = 'js/*.js';
@@ -95,12 +99,14 @@ gulp.task('watch', function() {
 	gulp.watch(jsFiles, ['build-js-common']);
 });
 
-gulp.task('compile', function(callback) {
-	runSequence('cleancss', 'mincss', 'cleanjs', 'minjs', callback);
-});
+gulp.task('compile', gulp.series('cleancss', 'mincss', 'cleanjs', 'minjs', function(done) {
+	done();
+}));
 
-gulp.task('build', function(callback) {
-	runSequence('build-css-files', 'build-js-libraries', 'build-js-common', 'compile', callback);
-});
+gulp.task('build', gulp.series('build-css-files', 'build-js-libraries', 'build-js-common', 'compile', function(done) {
+	done();
+}));
 
-gulp.task('default', ['build']);
+gulp.task('default', gulp.series('build-css-files', 'build-js-libraries', 'build-js-common', 'compile', function(done) {
+	done();
+}));
