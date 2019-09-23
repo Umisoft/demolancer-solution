@@ -1,7 +1,7 @@
 <?php
 	return [
 		'package' => 'demolancer',
-		'destination' => './libs/packer/out/demolancer/',
+		'destination' => './sys-temp/packer/out/demolancer/',
 		'directories' => [
 			'./templates/demolancer/',
 			'./images/cms/data/',
