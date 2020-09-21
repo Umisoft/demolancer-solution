@@ -1,4 +1,4 @@
--- Adminer 4.7.5 MySQL dump
+-- Adminer 4.7.7 MySQL dump
 
 SET NAMES utf8;
 SET time_zone = '+00:00';
@@ -127,12 +127,11 @@ CREATE TABLE `cms3_data_cache` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 INSERT INTO `cms3_data_cache` (`key`, `value`, `create_time`, `expire_time`, `entry_time`, `entries_number`) VALUES
-('7f5acc2ccd9e4ba638bb013134f9f47f',	's:206:\"{\"_browser_name\":\"Chrome\",\"_version\":\"79.0.3945.88\",\"_platform\":\"Linux\",\"_os\":\"unknown\",\"_is_aol\":false,\"_is_mobile\":false,\"_is_tablet\":false,\"_is_robot\":false,\"_is_facebook\":false,\"_aol_version\":\"unknown\"}\";',	1577274092,	1640432492,	0,	0),
-('support-end-time',	'i:1762948920;',	1579616942,	1579876142,	0,	0),
-('last-release-revision',	'i:89838;',	1579616942,	1579876142,	0,	0),
-('last-release-info',	's:183:\"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<modules>\n  <system>\n    <version>21</version>\n    <revision>89838</revision>\n    <date>2019-12-24T15:23:19+03:00</date>\n  </system>\n</modules>\n\";',	1579616942,	1579876142,	0,	0),
-('e49241e91c6fcd6fd4adb397cfa91bcb',	's:200:\"{\"_browser_name\":\"Mozilla\",\"_version\":\"5.0\",\"_platform\":\"unknown\",\"_os\":\"unknown\",\"_is_aol\":false,\"_is_mobile\":false,\"_is_tablet\":false,\"_is_robot\":false,\"_is_facebook\":false,\"_aol_version\":\"unknown\"}\";',	1579616890,	1642775290,	0,	0),
-('d6aedf4575b5874fc0d92ec6bf3ce1fc',	's:200:\"{\"_browser_name\":\"Mozilla\",\"_version\":\"5.0\",\"_platform\":\"unknown\",\"_os\":\"unknown\",\"_is_aol\":false,\"_is_mobile\":false,\"_is_tablet\":false,\"_is_robot\":false,\"_is_facebook\":false,\"_aol_version\":\"unknown\"}\";',	1579616996,	1642775396,	0,	0);
+('3bcc209beadf6c8cc32567b8843b412d',	's:209:\"{\"_browser_name\":\"Chrome\",\"_version\":\"85.0.4183.102\",\"_platform\":\"Windows\",\"_os\":\"unknown\",\"_is_aol\":false,\"_is_mobile\":false,\"_is_tablet\":false,\"_is_robot\":false,\"_is_facebook\":false,\"_aol_version\":\"unknown\"}\";',	1600699924,	1663771924,	0,	0),
+('last-release-revision',	'i:90004;',	1600699925,	1600959125,	0,	0),
+('last-release-info',	's:183:\"<?xml version=\"1.0\" encoding=\"utf-8\"?>\n<modules>\n  <system>\n    <version>21</version>\n    <revision>90004</revision>\n    <date>2020-02-05T19:21:31+03:00</date>\n  </system>\n</modules>\n\";',	1600699925,	1600959125,	0,	0),
+('last-release-version',	'i:21;',	1600699925,	1600959125,	0,	0),
+('support-end-time',	'i:1762948920;',	1600699925,	1600959125,	0,	0);
 
 DROP TABLE IF EXISTS `cms3_domains`;
 CREATE TABLE `cms3_domains` (
@@ -149,7 +148,7 @@ CREATE TABLE `cms3_domains` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `cms3_domains` (`id`, `host`, `is_default`, `default_lang_id`, `use_ssl`, `favicon`) VALUES
-(1,	'madgrant.ru',	1,	1,	0,	NULL);
+(1,	'apiship.madgrant.ru',	1,	1,	0,	NULL);
 
 DROP TABLE IF EXISTS `cms3_domain_mirrows`;
 CREATE TABLE `cms3_domain_mirrows` (
@@ -1307,7 +1306,18 @@ INSERT INTO `cms3_fields_controller` (`ord`, `field_id`, `group_id`) VALUES
 (16,	526,	355),
 (25,	527,	256),
 (30,	528,	291),
-(35,	529,	291);
+(35,	529,	291),
+(65,	530,	68),
+(70,	531,	68),
+(55,	532,	232),
+(60,	533,	232),
+(30,	382,	239),
+(40,	382,	245),
+(20,	382,	247),
+(30,	382,	250),
+(35,	382,	252),
+(25,	382,	254),
+(30,	534,	256);
 
 DROP TABLE IF EXISTS `cms3_hierarchy`;
 CREATE TABLE `cms3_hierarchy` (
@@ -1430,81 +1440,82 @@ CREATE TABLE `cms3_hierarchy_types` (
   `name` varchar(48) NOT NULL,
   `title` varchar(255) DEFAULT NULL,
   `ext` varchar(48) DEFAULT NULL,
+  `hide_pages` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`id`),
   KEY `name` (`name`,`ext`),
   KEY `title` (`title`),
   KEY `ext` (`ext`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `cms3_hierarchy_types` (`id`, `name`, `title`, `ext`) VALUES
-(1,	'news',	'i18n::hierarchy-type-news-rubric',	'rubric'),
-(2,	'emarket',	'i18n::hierarchy-type-emarket-currency',	'currency'),
-(3,	'emarket',	'i18n::hierarchy-type-emarket-discount_type',	'discount_type'),
-(4,	'emarket',	'i18n::hierarchy-type-emarket-discount_modificator_type',	'discount_modificator_type'),
-(5,	'emarket',	'i18n::hierarchy-type-emarket-discount_rule_type',	'discount_rule_type'),
-(6,	'social_networks',	'i18n::hierarchy-type-social_networks-networks',	'network'),
-(7,	'social_networks',	'i18n::hierarchy-type-social_networks-vkontakte',	'vkontakte'),
-(8,	'users',	'i18n::hierarchy-type-users-users',	'users'),
-(9,	'emarket',	'i18n::hierarchy-type-eshop-address',	'delivery_address'),
-(10,	'emarket',	'i18n::hierarchy-type-emarket-item_type',	'item_type'),
-(11,	'emarket',	'i18n::hierarchy-type-emarket-discount',	'discount'),
-(12,	'emarket',	'i18n::hierarchy-type-emarket-item_option',	'item_option'),
-(13,	'emarket',	'i18n::hierarchy-type-emarket-order_item',	'order_item'),
-(14,	'emarket',	'i18n::hierarchy-type-emarket-order_status',	'order_status'),
-(15,	'emarket',	'i18n::hierarchy-type-emarket-payment_type',	'payment_type'),
-(16,	'emarket',	'i18n::hierarchy-type-emarket-payment',	'payment'),
-(17,	'emarket',	'i18n::hierarchy-type-emarket-payment_status',	'order_payment_status'),
-(18,	'emarket',	'i18n::hierarchy-type-emarket-legal_person',	'legal_person'),
-(19,	'emarket',	'i18n::hierarchy-type-emarket-delivery_type',	'delivery_type'),
-(20,	'emarket',	'i18n::hierarchy-type-emarket-delivery',	'delivery'),
-(21,	'emarket',	'i18n::hierarchy-type-emarket-delivery_status',	'order_delivery_status'),
-(22,	'emarket',	'i18n::hierarchy-type-emarket-order',	'order'),
-(23,	'users',	'i18n::hierarchy-type-users-user',	'user'),
-(24,	'emarket',	'i18n::hierarchy-type-emarket-store',	'store'),
-(25,	'emarket',	'i18n::hierarchy-type-emarket-discount_modificator',	'discount_modificator'),
-(26,	'emarket',	'i18n::hierarchy-type-emarket-discount_rule',	'discount_rule'),
-(27,	'menu',	'i18n::hierarchy-type-menu-item_element',	'item_element'),
-(28,	'news',	'i18n::hierarchy-type-news-subject',	'subject'),
-(29,	'news',	'i18n::hierarchy-type-news-item',	'item'),
-(30,	'content',	'i18n::hierarchy-type-content-page',	''),
-(31,	'content',	'i18n::hierarchy-type-content-ticket',	'ticket'),
-(32,	'blogs20',	'i18n::hierarchy-type-blogs-blog',	'blog'),
-(33,	'users',	'i18n::hierarchy-type-users-author',	'author'),
-(34,	'blogs20',	'i18n::hierarchy-type-blogs20-comment',	'comment'),
-(35,	'blogs20',	'i18n::hierarchy-type-blogs20-post',	'post'),
-(36,	'forum',	'i18n::hierarchy-type-forum-conf',	'conf'),
-(37,	'forum',	'i18n::hierarchy-type-forum-topic',	'topic'),
-(38,	'forum',	'i18n::hierarchy-type-forum-message',	'message'),
-(39,	'comments',	'i18n::hierarchy-type-comments-comment',	'comment'),
-(40,	'vote',	'i18n::hierarchy-type-vote-poll_item',	'poll_item'),
-(41,	'vote',	'i18n::hierarchy-type-vote-poll',	'poll'),
-(42,	'webforms',	'i18n::hierarchy-type-webforms-page',	'page'),
-(43,	'webforms',	'i18n::hierarchy-type-webforms-form',	'form'),
-(44,	'webforms',	'i18n::hierarchy-type-webforms-template',	'template'),
-(45,	'webforms',	'i18n::hierarchy-type-webforms-address',	'address'),
-(46,	'photoalbum',	'i18n::hierarchy-type-photoalbum-album',	'album'),
-(47,	'photoalbum',	'i18n::hierarchy-type-photoalbum-photo',	'photo'),
-(48,	'faq',	'i18n::hierarchy-type-faq-project',	'project'),
-(49,	'faq',	'i18n::hierarchy-type-faq-category',	'category'),
-(50,	'faq',	'i18n::hierarchy-type-faq-question',	'question'),
-(51,	'dispatches',	'i18n::hierarchy-type-dispatches-dispatch',	'dispatch'),
-(52,	'dispatches',	'i18n::hierarchy-type-dispatches-release',	'release'),
-(53,	'dispatches',	'i18n::hierarchy-type-dispatches-message',	'message'),
-(54,	'dispatches',	'i18n::hierarchy-type-dispatches-subscriber',	'subscriber'),
-(55,	'catalog',	'i18n::hierarchy-type-catalog-category',	'category'),
-(56,	'catalog',	'i18n::hierarchy-type-catalog-object',	'object'),
-(57,	'emarket',	'i18n::hierarchy-type-emarket-unregistered_customer',	'customer'),
-(58,	'banners',	'i18n::hierarchy-type-banners-place',	'place'),
-(59,	'banners',	'i18n::hierarchy-type-banners-banner',	'banner'),
-(60,	'users',	'i18n::hierarchy-type-users-avatar',	'avatar'),
-(61,	'exchange',	'i18n::hierarchy-type-exchange-data_exchange_export',	'export'),
-(62,	'exchange',	'i18n::hierarchy-type-exchange-data_exchange_import',	'import'),
-(63,	'filemanager',	'i18n::hierarchy-type-filemanager-shared_file',	'shared_file'),
-(64,	'umiSettings',	'i18n::hierarchy-type-umiSettings-setting',	'settings'),
-(65,	'umiStub',	'i18n::hierarchy-type-umiStub-ip-blacklist',	'ip-blacklist'),
-(66,	'umiStub',	'i18n::hierarchy-type-umiStub-ip-whitelist',	'ip-whitelist'),
-(67,	'appointment',	'i18n::hierarchy-type-appointment-page',	'page'),
-(68,	'seo',	'i18n::hierarchy-type-seo-robots-txt',	'robots-txt');
+INSERT INTO `cms3_hierarchy_types` (`id`, `name`, `title`, `ext`, `hide_pages`) VALUES
+(1,	'news',	'i18n::hierarchy-type-news-rubric',	'rubric',	0),
+(2,	'emarket',	'i18n::hierarchy-type-emarket-currency',	'currency',	0),
+(3,	'emarket',	'i18n::hierarchy-type-emarket-discount_type',	'discount_type',	0),
+(4,	'emarket',	'i18n::hierarchy-type-emarket-discount_modificator_type',	'discount_modificator_type',	0),
+(5,	'emarket',	'i18n::hierarchy-type-emarket-discount_rule_type',	'discount_rule_type',	0),
+(6,	'social_networks',	'i18n::hierarchy-type-social_networks-networks',	'network',	0),
+(7,	'social_networks',	'i18n::hierarchy-type-social_networks-vkontakte',	'vkontakte',	0),
+(8,	'users',	'i18n::hierarchy-type-users-users',	'users',	0),
+(9,	'emarket',	'i18n::hierarchy-type-eshop-address',	'delivery_address',	0),
+(10,	'emarket',	'i18n::hierarchy-type-emarket-item_type',	'item_type',	0),
+(11,	'emarket',	'i18n::hierarchy-type-emarket-discount',	'discount',	0),
+(12,	'emarket',	'i18n::hierarchy-type-emarket-item_option',	'item_option',	0),
+(13,	'emarket',	'i18n::hierarchy-type-emarket-order_item',	'order_item',	0),
+(14,	'emarket',	'i18n::hierarchy-type-emarket-order_status',	'order_status',	0),
+(15,	'emarket',	'i18n::hierarchy-type-emarket-payment_type',	'payment_type',	0),
+(16,	'emarket',	'i18n::hierarchy-type-emarket-payment',	'payment',	0),
+(17,	'emarket',	'i18n::hierarchy-type-emarket-payment_status',	'order_payment_status',	0),
+(18,	'emarket',	'i18n::hierarchy-type-emarket-legal_person',	'legal_person',	0),
+(19,	'emarket',	'i18n::hierarchy-type-emarket-delivery_type',	'delivery_type',	0),
+(20,	'emarket',	'i18n::hierarchy-type-emarket-delivery',	'delivery',	0),
+(21,	'emarket',	'i18n::hierarchy-type-emarket-delivery_status',	'order_delivery_status',	0),
+(22,	'emarket',	'i18n::hierarchy-type-emarket-order',	'order',	0),
+(23,	'users',	'i18n::hierarchy-type-users-user',	'user',	0),
+(24,	'emarket',	'i18n::hierarchy-type-emarket-store',	'store',	0),
+(25,	'emarket',	'i18n::hierarchy-type-emarket-discount_modificator',	'discount_modificator',	0),
+(26,	'emarket',	'i18n::hierarchy-type-emarket-discount_rule',	'discount_rule',	0),
+(27,	'menu',	'i18n::hierarchy-type-menu-item_element',	'item_element',	0),
+(28,	'news',	'i18n::hierarchy-type-news-subject',	'subject',	0),
+(29,	'news',	'i18n::hierarchy-type-news-item',	'item',	0),
+(30,	'content',	'i18n::hierarchy-type-content-page',	'',	0),
+(31,	'content',	'i18n::hierarchy-type-content-ticket',	'ticket',	0),
+(32,	'blogs20',	'i18n::hierarchy-type-blogs-blog',	'blog',	0),
+(33,	'users',	'i18n::hierarchy-type-users-author',	'author',	0),
+(34,	'blogs20',	'i18n::hierarchy-type-blogs20-comment',	'comment',	0),
+(35,	'blogs20',	'i18n::hierarchy-type-blogs20-post',	'post',	0),
+(36,	'forum',	'i18n::hierarchy-type-forum-conf',	'conf',	0),
+(37,	'forum',	'i18n::hierarchy-type-forum-topic',	'topic',	0),
+(38,	'forum',	'i18n::hierarchy-type-forum-message',	'message',	0),
+(39,	'comments',	'i18n::hierarchy-type-comments-comment',	'comment',	0),
+(40,	'vote',	'i18n::hierarchy-type-vote-poll_item',	'poll_item',	0),
+(41,	'vote',	'i18n::hierarchy-type-vote-poll',	'poll',	0),
+(42,	'webforms',	'i18n::hierarchy-type-webforms-page',	'page',	0),
+(43,	'webforms',	'i18n::hierarchy-type-webforms-form',	'form',	0),
+(44,	'webforms',	'i18n::hierarchy-type-webforms-template',	'template',	0),
+(45,	'webforms',	'i18n::hierarchy-type-webforms-address',	'address',	0),
+(46,	'photoalbum',	'i18n::hierarchy-type-photoalbum-album',	'album',	0),
+(47,	'photoalbum',	'i18n::hierarchy-type-photoalbum-photo',	'photo',	0),
+(48,	'faq',	'i18n::hierarchy-type-faq-project',	'project',	0),
+(49,	'faq',	'i18n::hierarchy-type-faq-category',	'category',	0),
+(50,	'faq',	'i18n::hierarchy-type-faq-question',	'question',	0),
+(51,	'dispatches',	'i18n::hierarchy-type-dispatches-dispatch',	'dispatch',	0),
+(52,	'dispatches',	'i18n::hierarchy-type-dispatches-release',	'release',	0),
+(53,	'dispatches',	'i18n::hierarchy-type-dispatches-message',	'message',	0),
+(54,	'dispatches',	'i18n::hierarchy-type-dispatches-subscriber',	'subscriber',	0),
+(55,	'catalog',	'i18n::hierarchy-type-catalog-category',	'category',	0),
+(56,	'catalog',	'i18n::hierarchy-type-catalog-object',	'object',	0),
+(57,	'emarket',	'i18n::hierarchy-type-emarket-unregistered_customer',	'customer',	0),
+(58,	'banners',	'i18n::hierarchy-type-banners-place',	'place',	0),
+(59,	'banners',	'i18n::hierarchy-type-banners-banner',	'banner',	0),
+(60,	'users',	'i18n::hierarchy-type-users-avatar',	'avatar',	0),
+(61,	'exchange',	'i18n::hierarchy-type-exchange-data_exchange_export',	'export',	0),
+(62,	'exchange',	'i18n::hierarchy-type-exchange-data_exchange_import',	'import',	0),
+(63,	'filemanager',	'i18n::hierarchy-type-filemanager-shared_file',	'shared_file',	0),
+(64,	'umiSettings',	'i18n::hierarchy-type-umiSettings-setting',	'settings',	0),
+(65,	'umiStub',	'i18n::hierarchy-type-umiStub-ip-blacklist',	'ip-blacklist',	0),
+(66,	'umiStub',	'i18n::hierarchy-type-umiStub-ip-whitelist',	'ip-whitelist',	0),
+(67,	'appointment',	'i18n::hierarchy-type-appointment-page',	'page',	0),
+(68,	'seo',	'i18n::hierarchy-type-seo-robots-txt',	'robots-txt',	0);
 
 DROP TABLE IF EXISTS `cms3_import_apiship_orders`;
 CREATE TABLE `cms3_import_apiship_orders` (
@@ -2682,7 +2693,18 @@ INSERT INTO `cms3_import_fields` (`source_id`, `field_name`, `type_id`, `new_id`
 (1,	'appoint_book_time_hint',	126,	495),
 (1,	'open_the_payment_result_waiting_page',	112,	527),
 (1,	'domain_id',	120,	528),
-(1,	'robots_txt',	120,	529);
+(1,	'robots_txt',	120,	529),
+(1,	'auth_token',	54,	530),
+(1,	'social_uid',	54,	531),
+(1,	'include_fees',	99,	532),
+(1,	'yandex_map_api_key',	99,	533),
+(1,	'keep_log',	103,	382),
+(1,	'keep_log',	106,	382),
+(1,	'keep_log',	107,	382),
+(1,	'keep_log',	109,	382),
+(1,	'keep_log',	110,	382),
+(1,	'keep_log',	111,	382),
+(1,	'disable_auto_capture',	112,	534);
 
 DROP TABLE IF EXISTS `cms3_import_groups`;
 CREATE TABLE `cms3_import_groups` (
@@ -3936,7 +3958,8 @@ INSERT INTO `cms3_import_objects` (`source_id`, `old_id`, `new_id`) VALUES
 (1,	'28242',	586),
 (1,	'28243',	590),
 (1,	'28244',	593),
-(1,	'28245',	618);
+(1,	'28245',	618),
+(1,	'28246',	686);
 
 DROP TABLE IF EXISTS `cms3_import_offer_list`;
 CREATE TABLE `cms3_import_offer_list` (
@@ -3978,6 +4001,45 @@ CREATE TABLE `cms3_import_offer_price_type_list` (
 
 INSERT INTO `cms3_import_offer_price_type_list` (`external_id`, `internal_id`, `source_id`) VALUES
 ('1',	1,	1);
+
+DROP TABLE IF EXISTS `cms3_import_push_message_list`;
+CREATE TABLE `cms3_import_push_message_list` (
+  `external_id` varchar(255) NOT NULL,
+  `internal_id` int(10) unsigned NOT NULL,
+  `source_id` int(10) unsigned NOT NULL,
+  KEY `external_id` (`external_id`,`source_id`),
+  KEY `internal_id` (`internal_id`,`source_id`),
+  KEY `source_id` (`source_id`),
+  CONSTRAINT `internal id to message` FOREIGN KEY (`internal_id`) REFERENCES `cms3_push_message_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `message source id to import source` FOREIGN KEY (`source_id`) REFERENCES `cms3_import_sources` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cms3_import_push_subscriber_list`;
+CREATE TABLE `cms3_import_push_subscriber_list` (
+  `external_id` varchar(255) NOT NULL,
+  `internal_id` int(10) unsigned NOT NULL,
+  `source_id` int(10) unsigned NOT NULL,
+  KEY `external_id` (`external_id`,`source_id`),
+  KEY `internal_id` (`internal_id`,`source_id`),
+  KEY `source_id` (`source_id`),
+  CONSTRAINT `internal id to subscriber` FOREIGN KEY (`internal_id`) REFERENCES `cms3_push_subscriber_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `subscriber source id to import source` FOREIGN KEY (`source_id`) REFERENCES `cms3_import_sources` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cms3_import_push_topic_list`;
+CREATE TABLE `cms3_import_push_topic_list` (
+  `external_id` varchar(255) NOT NULL,
+  `internal_id` int(10) unsigned NOT NULL,
+  `source_id` int(10) unsigned NOT NULL,
+  KEY `external_id` (`external_id`,`source_id`),
+  KEY `internal_id` (`internal_id`,`source_id`),
+  KEY `source_id` (`source_id`),
+  CONSTRAINT `internal id to topic` FOREIGN KEY (`internal_id`) REFERENCES `cms3_push_topic_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `topic source id to import source` FOREIGN KEY (`source_id`) REFERENCES `cms3_import_sources` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 DROP TABLE IF EXISTS `cms3_import_redirects`;
 CREATE TABLE `cms3_import_redirects` (
@@ -5253,7 +5315,8 @@ INSERT INTO `cms3_objects` (`id`, `guid`, `name`, `is_locked`, `type_id`, `owner
 (682,	'',	'Новые способы заработка',	0,	7,	182,	22,	1560855573),
 (683,	'',	'Заработок на файлообменниках',	0,	60,	182,	23,	1560855650),
 (684,	'',	'Заработок в интернете на своем сайте',	0,	60,	182,	24,	1560855694),
-(685,	'',	'Заработок на букмекерских конторах',	0,	60,	182,	25,	1560855725);
+(685,	'',	'Заработок на букмекерских конторах',	0,	60,	182,	25,	1560855725),
+(686,	'emarket-order-payment-status-refund',	'i18n::object-order-payment-status-refund',	1,	48,	0,	6,	1600700102);
 
 DROP TABLE IF EXISTS `cms3_objects_expiration`;
 CREATE TABLE `cms3_objects_expiration` (
@@ -5940,7 +6003,6 @@ INSERT INTO `cms3_object_content` (`obj_id`, `field_id`, `int_val`, `varchar_val
 (630,	280,	127,	NULL,	NULL,	NULL,	NULL,	NULL),
 (630,	3,	NULL,	'Контакты',	NULL,	NULL,	NULL,	NULL),
 (631,	482,	NULL,	'demolancer',	NULL,	NULL,	NULL,	NULL),
-(631,	483,	1,	NULL,	NULL,	NULL,	NULL,	NULL),
 (632,	3,	NULL,	'Как цвета в дизайне интернет-магазина влияют на продажи',	NULL,	NULL,	NULL,	NULL),
 (632,	244,	1559906460,	NULL,	NULL,	NULL,	NULL,	NULL),
 (633,	3,	NULL,	'Как быстро наполнить и запустить интернет-магазин',	NULL,	NULL,	NULL,	NULL),
@@ -6032,7 +6094,9 @@ INSERT INTO `cms3_object_content` (`obj_id`, `field_id`, `int_val`, `varchar_val
 (624,	526,	NULL,	'Смотреть все',	NULL,	NULL,	NULL,	NULL),
 (631,	504,	NULL,	NULL,	'<p><a href=\"tel:+79123456789\"><span style=\"font-size: 24pt; color: #ffffff;\"><br>8 (912) 345-67-89</span></a></p>',	NULL,	NULL,	NULL),
 (630,	4,	NULL,	NULL,	'<table class=\"contact_info\">\r\n<tbody>\r\n<tr class=\"contact_info_block contact_address\">\r\n<td class=\"contact_title\">\r\n<div>Адрес:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div>Санкт-Петербург, ул. Орджоникидзе, 25</div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_time\">\r\n<td class=\"contact_title\">\r\n<div>Время работы:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div>с 9-00 до 20-00</div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_phone\">\r\n<td class=\"contact_title\">\r\n<div>Телефон:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div><a href=\"tel:+78212345678\">+7 (812) 234-56-78</a></div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_fax\">\r\n<td class=\"contact_title\">\r\n<div>WhatsApp:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div>+7 (812) 234-56-77</div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_skype\">\r\n<td class=\"contact_title\">\r\n<div>Skype:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div><a href=\"skype:stolyarova_vika\">stolyarova_vika</a></div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_email\">\r\n<td class=\"contact_title\">\r\n<div>Email:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div><a href=\"mailto:stolyarova_vika@gmail.com\">stolyarova_vika@gmail.com</a></div>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<div class=\"code_pre yandex_map\"><iframe frameborder=\"0\" src=\"https://yandex.ru/map-widget/v1/?um=constructor%3Ad99c67a2619bedaa9b4f611d4ea21367fa9a0f783f99b7594f64b11b6d98f849&amp;source=constructor\" width=\"100%\" height=\"400\"></iframe></div>\r\n<p style=\"text-align: justify;\">Чтобы задать вопрос заполните ниже форму обратной связи. Также можно задать вопрос, позвонив по телефону или связавшись со мной по скайпу.&nbsp;</p>',	NULL,	NULL,	NULL),
-(182,	220,	NULL,	NULL,	'a:20:{s:15:\"tree-data-types\";a:1:{s:8:\"expanded\";s:11:\"{0}{3}{123}\";}s:21:\"tree-emarket-delivery\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-data-guide_items\";a:2:{s:8:\"expanded\";s:3:\"{0}\";s:12:\"used-columns\";s:134:\"name[509px]|identifier[200px]|link[200px]|css_class[200px]|is_registrated[200px]|user_id[200px]|nickname[200px]|email[200px]|ip[200px]\";}s:15:\"tree-content--1\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-photoalbum-lists\";a:1:{s:8:\"expanded\";s:6:\"{0}{3}\";}s:18:\"tree-blogs20-posts\";a:2:{s:8:\"expanded\";s:6:\"{0}{8}\";s:12:\"used-columns\";s:43:\"name[400px]|publish_time[250px]|tags[582px]\";}s:18:\"tree-blogs20-blogs\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:23:\"tree-webforms-addresses\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:19:\"tree-webforms-forms\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:22:\"tree-webforms-messages\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:23:\"tree-webforms-templates\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-umiSettings-read\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-blogs20-comments\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:20:\"tree-exchange-import\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:12:\"tree_common0\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:15:\"tree-news-lists\";a:1:{s:8:\"expanded\";s:10:\"{0}{9}{43}\";}s:16:\"tree-data-guides\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:13:\"search-string\";a:2:{s:16:\"tree-data-guides\";s:12:\"социал\";s:15:\"tree-data-types\";s:10:\"заказ\";}s:16:\"tree-trash-trash\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-users-users_list\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}}',	NULL,	NULL,	NULL);
+(182,	220,	NULL,	NULL,	'a:20:{s:15:\"tree-data-types\";a:1:{s:8:\"expanded\";s:11:\"{0}{3}{123}\";}s:21:\"tree-emarket-delivery\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-data-guide_items\";a:2:{s:8:\"expanded\";s:3:\"{0}\";s:12:\"used-columns\";s:134:\"name[509px]|identifier[200px]|link[200px]|css_class[200px]|is_registrated[200px]|user_id[200px]|nickname[200px]|email[200px]|ip[200px]\";}s:15:\"tree-content--1\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-photoalbum-lists\";a:1:{s:8:\"expanded\";s:6:\"{0}{3}\";}s:18:\"tree-blogs20-posts\";a:2:{s:8:\"expanded\";s:6:\"{0}{8}\";s:12:\"used-columns\";s:43:\"name[400px]|publish_time[250px]|tags[582px]\";}s:18:\"tree-blogs20-blogs\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:23:\"tree-webforms-addresses\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:19:\"tree-webforms-forms\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:22:\"tree-webforms-messages\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:23:\"tree-webforms-templates\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-umiSettings-read\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-blogs20-comments\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:20:\"tree-exchange-import\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:12:\"tree_common0\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:15:\"tree-news-lists\";a:1:{s:8:\"expanded\";s:10:\"{0}{9}{43}\";}s:16:\"tree-data-guides\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:13:\"search-string\";a:2:{s:16:\"tree-data-guides\";s:12:\"социал\";s:15:\"tree-data-types\";s:10:\"заказ\";}s:16:\"tree-trash-trash\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-users-users_list\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}}',	NULL,	NULL,	NULL),
+(686,	40,	NULL,	'refund',	NULL,	NULL,	NULL,	NULL),
+(686,	111,	80,	NULL,	NULL,	NULL,	NULL,	NULL);
 
 DROP TABLE IF EXISTS `cms3_object_content_cnt`;
 CREATE TABLE `cms3_object_content_cnt` (
@@ -6499,8 +6563,8 @@ INSERT INTO `cms3_object_fields` (`id`, `name`, `title`, `is_locked`, `field_typ
 (397,	'sign_image',	'i18n::field-sign_image',	0,	9,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	0),
 (398,	'mnt_system_url',	'i18n::field-mnt_system_url',	1,	20,	0,	1,	NULL,	0,	0,	'Введите demo.moneta.ru, если у вас включен тестовый режим, либо www.payanyway.ru, если включен боевой режим.',	1,	NULL,	0,	0,	1),
 (399,	'mnt_id',	'i18n::field-mnt_id',	1,	20,	0,	1,	NULL,	0,	0,	'',	1,	NULL,	0,	0,	1),
-(400,	'mnt_success_url',	'i18n::field-successful_pay_url',	1,	20,	0,	1,	NULL,	0,	0,	'',	1,	NULL,	0,	0,	1),
-(401,	'mnt_fail_url',	'i18n::field-failed_pay_url',	1,	20,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	1),
+(400,	'mnt_success_url',	'i18n::field-successful_pay_url',	1,	20,	0,	1,	NULL,	0,	0,	'Вы можете указать значение непосредственно в личном кабинете на demo.moneta.ru, если у вас включен тестовый режим, либо на www.payanyway.ru, если включен боевой режим.',	1,	NULL,	0,	0,	1),
+(401,	'mnt_fail_url',	'i18n::field-failed_pay_url',	1,	20,	0,	1,	NULL,	0,	0,	'Вы можете указать значение непосредственно в личном кабинете на demo.moneta.ru, если у вас включен тестовый режим, либо на www.payanyway.ru, если включен боевой режим.',	0,	NULL,	0,	0,	1),
 (402,	'mnt_data_integrity_code',	'i18n::field-data_integrity_code',	1,	20,	0,	1,	NULL,	0,	0,	'',	1,	NULL,	0,	0,	1),
 (403,	'mnt_test_mode',	'i18n::field-test_mode',	1,	1,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	1),
 (404,	'project',	'i18n::field-project-id',	1,	20,	0,	1,	NULL,	0,	0,	'',	1,	NULL,	0,	0,	0),
@@ -6582,7 +6646,7 @@ INSERT INTO `cms3_object_fields` (`id`, `name`, `title`, `is_locked`, `field_typ
 (480,	'fs_file',	'i18n::field-fs_file',	1,	7,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	1),
 (481,	'downloads_counter',	'i18n::field-downloads_counter',	1,	10,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	0),
 (482,	'custom_id',	'i18n::field-sid',	1,	20,	0,	0,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	1),
-(483,	'lang_id',	'i18n::field-lang_id',	1,	10,	0,	0,	NULL,	0,	0,	'',	1,	NULL,	0,	0,	1),
+(483,	'lang_id',	'i18n::field-lang_id',	1,	29,	0,	0,	NULL,	0,	0,	'',	1,	NULL,	0,	0,	1),
 (484,	'domain_id',	'i18n::field-domain_id',	1,	5,	0,	0,	NULL,	0,	0,	'',	1,	NULL,	0,	0,	1),
 (485,	'appoint_service_choice_title',	'i18n::field-appoint-service-choice-title',	1,	20,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	1),
 (486,	'appoint_hint_step_text',	'i18n::field-appoint-hint-step-text',	1,	20,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	1),
@@ -6628,7 +6692,12 @@ INSERT INTO `cms3_object_fields` (`id`, `name`, `title`, `is_locked`, `field_typ
 (526,	'photo_block_link_text',	'Текст ссылки на источник фотографий',	0,	20,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	1),
 (527,	'open_the_payment_result_waiting_page',	'i18n::field-open-the-payment-result-waiting-page',	1,	1,	0,	1,	NULL,	0,	0,	'Если данная настройка включена, то после окончания платежа покупатель будет перенаправлен на страницу на сайте /emarket/purchase/result/wait/, поэтому необходимо добавить обработку этой страницы в шаблоне сайта.',	0,	NULL,	0,	0,	1),
 (528,	'domain_id',	'i18n::field_domain',	1,	5,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	0),
-(529,	'robots_txt',	'i18n::field-robotstxt',	1,	24,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	0);
+(529,	'robots_txt',	'i18n::field-robotstxt',	1,	24,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	0,	0),
+(530,	'auth_token',	'i18n::field-auth-token',	1,	24,	0,	0,	NULL,	0,	0,	'',	0,	NULL,	0,	1,	0),
+(531,	'social_uid',	'i18n::field-social_uid',	1,	24,	0,	0,	NULL,	0,	0,	'',	0,	NULL,	0,	1,	0),
+(532,	'include_fees',	'i18n::field-apiship-include-fees',	1,	1,	0,	1,	NULL,	0,	0,	'',	0,	NULL,	0,	1,	0),
+(533,	'yandex_map_api_key',	'i18n::field-apiship-yandex_map_api_key',	1,	20,	0,	1,	NULL,	0,	0,	'Процедура получения ключа описана в подсказке',	0,	NULL,	0,	0,	1),
+(534,	'disable_auto_capture',	'i18n::field-disable-auto-capture',	1,	1,	0,	1,	NULL,	0,	0,	'i18n::field-disable-auto-capture-hint',	0,	NULL,	0,	0,	1);
 
 DROP TABLE IF EXISTS `cms3_object_fields_restrictions`;
 CREATE TABLE `cms3_object_fields_restrictions` (
@@ -6883,7 +6952,7 @@ INSERT INTO `cms3_object_field_groups` (`id`, `name`, `title`, `type_id`, `is_ac
 (229,	'delivery_description_props',	'i18n::fields-group-delivery_description',	98,	1,	1,	5,	0,	'Если установлено - не будет отображаться на сайте'),
 (230,	'settings',	'i18n::fields-group-settings',	98,	1,	1,	10,	0,	'Настройки этого способа доставки Почтой России'),
 (231,	'delivery_description_props',	'i18n::fields-group-delivery_description',	99,	1,	1,	5,	0,	'Общие настройки способа доставки'),
-(232,	'settings',	'i18n::fields-group-settings',	99,	1,	1,	10,	1,	'Если установлено - не будет отображаться на сайте'),
+(232,	'settings',	'i18n::fields-group-settings',	99,	1,	1,	10,	1,	'Процедура получения ключа описана в подсказке'),
 (233,	'payment_props',	'i18n::fields-group-payment_props',	100,	1,	1,	5,	0,	'Если установлено - не будет отображаться на сайте'),
 (234,	'settings',	'i18n::fields-group-parameters',	100,	1,	1,	10,	0,	''),
 (235,	'payment_props',	'i18n::fields-group-payment_props',	101,	1,	1,	5,	0,	'Если установлено - не будет отображаться на сайте'),
@@ -7009,7 +7078,7 @@ DROP TABLE IF EXISTS `cms3_object_field_types`;
 CREATE TABLE `cms3_object_field_types` (
   `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
   `name` varchar(64) DEFAULT NULL,
-  `data_type` enum('int','string','text','relation','file','img_file','swf_file','bool','date','boolean','wysiwyg','password','tags','symlink','price','formula','float','counter','optioned','video_file','color','link_to_object_type','multiple_image','domain_id','domain_id_list','offer_id_list','offer_id') DEFAULT NULL,
+  `data_type` enum('int','string','text','relation','file','img_file','swf_file','bool','date','boolean','wysiwyg','password','tags','symlink','price','formula','float','counter','optioned','video_file','color','link_to_object_type','multiple_image','domain_id','domain_id_list','offer_id_list','offer_id','multiple_file','lang_id','lang_id_list') DEFAULT NULL,
   `is_multiple` tinyint(1) DEFAULT 0,
   `is_unsigned` tinyint(1) DEFAULT 0,
   PRIMARY KEY (`id`),
@@ -7046,7 +7115,10 @@ INSERT INTO `cms3_object_field_types` (`id`, `name`, `data_type`, `is_multiple`,
 (24,	'i18n::field-type-text',	'text',	0,	0),
 (25,	'i18n::field-type-video',	'video_file',	0,	0),
 (26,	'i18n::field-type-wysiwyg',	'wysiwyg',	0,	0),
-(27,	'i18n::field-type-multiple-file',	'',	1,	0);
+(27,	'i18n::field-type-multiple-file',	'',	1,	0),
+(28,	'i18n::field-type-multiple-file',	'multiple_file',	1,	0),
+(29,	'i18n::field-type-lang-id',	'lang_id',	0,	0),
+(30,	'i18n::field-type-lang-id-list',	'lang_id_list',	1,	0);
 
 DROP TABLE IF EXISTS `cms3_object_files`;
 CREATE TABLE `cms3_object_files` (
@@ -7099,6 +7171,25 @@ INSERT INTO `cms3_object_images` (`id`, `obj_id`, `field_id`, `src`, `alt`, `tit
 (16,	666,	301,	'./images/cms/data/fotogalereya/s1_377202_45.jpg',	'',	'',	1),
 (17,	667,	301,	'./images/cms/data/fotogalereya/main19589_1.jpg',	'',	'',	1),
 (19,	631,	501,	'./images/cms/data/shutterstock_124302109.jpg',	'Столярова Виктория',	'Менеджер интернет-проектов, фрилансер',	1);
+
+DROP TABLE IF EXISTS `cms3_object_lang_id_list`;
+CREATE TABLE `cms3_object_lang_id_list` (
+  `id` int(10) unsigned NOT NULL AUTO_INCREMENT,
+  `obj_id` int(10) unsigned DEFAULT NULL,
+  `field_id` int(10) unsigned DEFAULT NULL,
+  `lang_id` int(10) unsigned DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `cms3_object_lang_id_list load field value` (`obj_id`,`field_id`),
+  KEY `cms3_object_lang_id_list field_id` (`field_id`),
+  KEY `cms3_object_lang_id_list obj_id` (`obj_id`),
+  KEY `cms3_object_lang_id_list lang_id` (`lang_id`),
+  CONSTRAINT `cms3_object_lang_id_list field id` FOREIGN KEY (`field_id`) REFERENCES `cms3_object_fields` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `cms3_object_lang_id_list lang id` FOREIGN KEY (`lang_id`) REFERENCES `cms3_langs` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `cms3_object_lang_id_list object id` FOREIGN KEY (`obj_id`) REFERENCES `cms3_objects` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+INSERT INTO `cms3_object_lang_id_list` (`id`, `obj_id`, `field_id`, `lang_id`) VALUES
+(1,	631,	483,	1);
 
 DROP TABLE IF EXISTS `cms3_object_offer_id_list`;
 CREATE TABLE `cms3_object_offer_id_list` (
@@ -7471,54 +7562,54 @@ INSERT INTO `cms3_object_type_tree` (`id`, `parent_id`, `child_id`, `level`) VAL
 (183,	1,	13,	2),
 (184,	NULL,	18,	2),
 (185,	1,	18,	2),
-(188,	NULL,	20,	2),
-(189,	1,	20,	2),
-(190,	NULL,	21,	1),
-(191,	NULL,	22,	2),
-(192,	1,	22,	2),
-(193,	NULL,	23,	2),
-(194,	1,	23,	2),
-(195,	NULL,	24,	2),
-(196,	1,	24,	2),
-(197,	NULL,	26,	2),
-(198,	1,	26,	2),
-(199,	NULL,	30,	2),
-(200,	1,	30,	2),
-(201,	NULL,	31,	2),
-(202,	1,	31,	2),
-(203,	NULL,	33,	2),
-(204,	1,	33,	2),
-(205,	NULL,	37,	2),
-(206,	3,	37,	2),
-(207,	NULL,	41,	2),
-(208,	1,	41,	2),
-(209,	NULL,	42,	1),
-(210,	NULL,	43,	2),
-(211,	1,	43,	2),
-(212,	NULL,	50,	2),
-(213,	1,	50,	2),
-(214,	NULL,	55,	2),
-(215,	1,	55,	2),
-(216,	NULL,	56,	2),
-(217,	32,	56,	2),
-(218,	NULL,	59,	2),
-(219,	1,	59,	2),
-(220,	NULL,	79,	2),
-(221,	3,	79,	2),
-(222,	NULL,	80,	2),
-(223,	3,	80,	2),
-(224,	NULL,	88,	2),
-(225,	1,	88,	2),
-(226,	NULL,	89,	2),
-(227,	32,	89,	2),
-(228,	NULL,	118,	2),
-(229,	1,	118,	2),
-(230,	NULL,	120,	2),
-(231,	119,	120,	2),
-(232,	NULL,	124,	2),
-(233,	1,	124,	2),
-(234,	NULL,	125,	2),
-(235,	1,	125,	2);
+(186,	NULL,	20,	2),
+(187,	1,	20,	2),
+(188,	NULL,	21,	1),
+(189,	NULL,	22,	2),
+(190,	1,	22,	2),
+(191,	NULL,	23,	2),
+(192,	1,	23,	2),
+(193,	NULL,	24,	2),
+(194,	1,	24,	2),
+(195,	NULL,	26,	2),
+(196,	1,	26,	2),
+(197,	NULL,	30,	2),
+(198,	1,	30,	2),
+(199,	NULL,	31,	2),
+(200,	1,	31,	2),
+(201,	NULL,	33,	2),
+(202,	1,	33,	2),
+(203,	NULL,	37,	2),
+(204,	3,	37,	2),
+(205,	NULL,	41,	2),
+(206,	1,	41,	2),
+(207,	NULL,	42,	1),
+(208,	NULL,	43,	2),
+(209,	1,	43,	2),
+(210,	NULL,	50,	2),
+(211,	1,	50,	2),
+(212,	NULL,	55,	2),
+(213,	1,	55,	2),
+(214,	NULL,	56,	2),
+(215,	32,	56,	2),
+(216,	NULL,	59,	2),
+(217,	1,	59,	2),
+(218,	NULL,	79,	2),
+(219,	3,	79,	2),
+(220,	NULL,	80,	2),
+(221,	3,	80,	2),
+(222,	NULL,	88,	2),
+(223,	1,	88,	2),
+(224,	NULL,	89,	2),
+(225,	32,	89,	2),
+(226,	NULL,	118,	2),
+(227,	1,	118,	2),
+(228,	NULL,	120,	2),
+(229,	119,	120,	2),
+(230,	NULL,	124,	2),
+(231,	1,	124,	2),
+(232,	NULL,	125,	2),
+(233,	1,	125,	2);
 
 DROP TABLE IF EXISTS `cms3_offer_list`;
 CREATE TABLE `cms3_offer_list` (
@@ -7612,6 +7703,71 @@ INSERT INTO `cms3_permissions` (`level`, `owner_id`, `rel_id`) VALUES
 (1,	619,	1),
 (1,	619,	5);
 
+DROP TABLE IF EXISTS `cms3_push_message_list`;
+CREATE TABLE `cms3_push_message_list` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `title` varchar(255) NOT NULL,
+  `body` varchar(255) NOT NULL,
+  `icon` varchar(255) NOT NULL,
+  `click_action` varchar(255) NOT NULL,
+  `create_time` int(11) unsigned NOT NULL,
+  `is_send` tinyint(1) DEFAULT 0,
+  `publish_time` int(11) unsigned DEFAULT NULL,
+  `expiration_time` int(11) unsigned DEFAULT NULL,
+  `send_time` int(11) unsigned DEFAULT NULL,
+  `domain_id` int(10) unsigned NOT NULL,
+  `lang_id` int(10) unsigned NOT NULL,
+  `topic_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  KEY `cms3_push_message_list domain_id` (`domain_id`),
+  KEY `cms3_push_message_list lang_id` (`lang_id`),
+  KEY `cms3_push_message_list topic_id` (`topic_id`),
+  CONSTRAINT `cms3_push_message_list domain_id` FOREIGN KEY (`domain_id`) REFERENCES `cms3_domains` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cms3_push_message_list lang_id` FOREIGN KEY (`lang_id`) REFERENCES `cms3_langs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cms3_push_message_list topic_id` FOREIGN KEY (`topic_id`) REFERENCES `cms3_push_topic_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cms3_push_subscriber_list`;
+CREATE TABLE `cms3_push_subscriber_list` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `token` varchar(255) NOT NULL,
+  `create_time` int(11) unsigned NOT NULL,
+  `user_id` int(10) unsigned NOT NULL,
+  `domain_id` int(10) unsigned DEFAULT NULL,
+  `lang_id` int(10) unsigned DEFAULT NULL,
+  `topic_id` int(11) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `token` (`token`),
+  KEY `cms3_push_subscriber_list user_id` (`user_id`),
+  KEY `cms3_push_subscriber_list domain_id` (`domain_id`),
+  KEY `cms3_push_subscriber_list lang_id` (`lang_id`),
+  KEY `cms3_push_subscriber_list topic_id` (`topic_id`),
+  CONSTRAINT `cms3_push_subscriber_list domain_id` FOREIGN KEY (`domain_id`) REFERENCES `cms3_domains` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cms3_push_subscriber_list lang_id` FOREIGN KEY (`lang_id`) REFERENCES `cms3_langs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cms3_push_subscriber_list topic_id` FOREIGN KEY (`topic_id`) REFERENCES `cms3_push_topic_list` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cms3_push_subscriber_list user_id` FOREIGN KEY (`user_id`) REFERENCES `cms3_objects` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
+DROP TABLE IF EXISTS `cms3_push_topic_list`;
+CREATE TABLE `cms3_push_topic_list` (
+  `id` int(11) unsigned NOT NULL AUTO_INCREMENT,
+  `name` varchar(255) NOT NULL,
+  `title` varchar(255) NOT NULL,
+  `is_locked` tinyint(1) DEFAULT 0,
+  `create_time` int(11) unsigned NOT NULL,
+  `domain_id` int(10) unsigned NOT NULL,
+  `lang_id` int(10) unsigned NOT NULL,
+  PRIMARY KEY (`id`),
+  UNIQUE KEY `name` (`name`),
+  KEY `cms3_push_topic_list domain_id` (`domain_id`),
+  KEY `cms3_push_topic_list lang_id` (`lang_id`),
+  CONSTRAINT `cms3_push_topic_list domain_id` FOREIGN KEY (`domain_id`) REFERENCES `cms3_domains` (`id`) ON DELETE CASCADE ON UPDATE CASCADE,
+  CONSTRAINT `cms3_push_topic_list lang_id` FOREIGN KEY (`lang_id`) REFERENCES `cms3_langs` (`id`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+
 DROP TABLE IF EXISTS `cms3_redirects`;
 CREATE TABLE `cms3_redirects` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
@@ -7655,28 +7811,28 @@ CREATE TABLE `cms3_search` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 INSERT INTO `cms3_search` (`rel_id`, `indextime`, `lang_id`, `domain_id`, `type_id`) VALUES
-(1,	1577274199,	1,	1,	30),
-(2,	1577274199,	1,	1,	30),
-(3,	1577274199,	1,	1,	46),
-(4,	1577274199,	1,	1,	32),
-(5,	1577274199,	1,	1,	42),
-(6,	1577274199,	1,	1,	35),
-(7,	1577274199,	1,	1,	35),
-(8,	1577274199,	1,	1,	35),
-(26,	1577274199,	1,	1,	47),
-(27,	1577274199,	1,	1,	47),
-(28,	1577274199,	1,	1,	47),
-(29,	1577274199,	1,	1,	47),
-(30,	1577274199,	1,	1,	47),
-(31,	1577274199,	1,	1,	47),
-(32,	1577274199,	1,	1,	47),
-(33,	1577274199,	1,	1,	47),
-(34,	1577274199,	1,	1,	47),
-(35,	1577274199,	1,	1,	47),
-(43,	1577274199,	1,	1,	1),
-(44,	1577274199,	1,	1,	29),
-(45,	1577274199,	1,	1,	29),
-(46,	1577274199,	1,	1,	29);
+(1,	1600700148,	1,	1,	30),
+(2,	1600700148,	1,	1,	30),
+(3,	1600700148,	1,	1,	46),
+(4,	1600700149,	1,	1,	32),
+(5,	1600700149,	1,	1,	42),
+(6,	1600700149,	1,	1,	35),
+(7,	1600700149,	1,	1,	35),
+(8,	1600700149,	1,	1,	35),
+(26,	1600700149,	1,	1,	47),
+(27,	1600700149,	1,	1,	47),
+(28,	1600700149,	1,	1,	47),
+(29,	1600700149,	1,	1,	47),
+(30,	1600700149,	1,	1,	47),
+(31,	1600700149,	1,	1,	47),
+(32,	1600700149,	1,	1,	47),
+(33,	1600700149,	1,	1,	47),
+(34,	1600700149,	1,	1,	47),
+(35,	1600700149,	1,	1,	47),
+(43,	1600700149,	1,	1,	1),
+(44,	1600700149,	1,	1,	29),
+(45,	1600700149,	1,	1,	29),
+(46,	1600700149,	1,	1,	29);
 
 DROP TABLE IF EXISTS `cms3_search_index`;
 CREATE TABLE `cms3_search_index` (
@@ -8815,7 +8971,7 @@ INSERT INTO `cms_reg` (`id`, `var`, `val`, `rel`) VALUES
 (224,	'autoupdate',	'autoupdate',	1),
 (225,	'name',	'autoupdate',	224),
 (226,	'filename',	'modules/autoupdate/class.php',	224),
-(227,	'config',	'0',	224),
+(227,	'config',	'1',	224),
 (228,	'default_method',	'updateall',	224),
 (229,	'default_method_admin',	'versions',	224),
 (230,	'backup',	'backup',	1),
@@ -8891,20 +9047,20 @@ INSERT INTO `cms_reg` (`id`, `var`, `val`, `rel`) VALUES
 (306,	'default_method',	'page',	296),
 (307,	'default_method_admin',	'orders',	296),
 (308,	'settings',	'',	0),
-(309,	'keycode',	'DF9B10B4E72-F528764D624-C0646C55DF2',	308),
+(309,	'keycode',	'98CFE24FEB2-F528764D624-1052CD80889',	308),
 (310,	'system_edition',	'commerce',	308),
 (311,	'previous_edition',	'commerce',	308),
-(312,	'system_version',	'21',	308),
-(313,	'system_build',	'89838',	308),
-(314,	'last_updated',	'1577274115',	308),
-(315,	'system_build',	'89838',	224),
+(312,	'system_version',	'dev',	308),
+(313,	'system_build',	'91018',	308),
+(314,	'last_updated',	'1600699929',	308),
+(315,	'system_build',	'91018',	224),
 (316,	'install',	'1559905293',	308),
 (317,	'guest_id',	'619',	163),
 (318,	'create',	'1559905293',	308),
 (319,	'umiMessages',	'',	0),
-(320,	'lastConnectTime',	'1560768465',	319),
+(320,	'lastConnectTime',	'1600699857',	319),
 (321,	'lastMessageId',	'0',	319),
-(322,	'last_mess_time',	'1559913643',	308),
+(322,	'last_mess_time',	'1600699860',	308),
 (323,	'autocreate_path',	'',	34),
 (324,	'moderate_comments',	'0',	34),
 (325,	'use-umiNotifications',	'0',	34),
@@ -8968,6 +9124,7 @@ CREATE TABLE `cms_sitemap` (
   `dt` datetime NOT NULL,
   `level` int(4) unsigned NOT NULL,
   `lang_id` int(10) unsigned NOT NULL,
+  `change_frequency` enum('always','hourly','daily','weekly','monthly','yearly','never','') DEFAULT NULL,
   PRIMARY KEY (`id`),
   KEY `__sort` (`sort`),
   KEY `__domain_id` (`domain_id`),
@@ -8978,29 +9135,45 @@ CREATE TABLE `cms_sitemap` (
   CONSTRAINT `lang_id from cms3_langs` FOREIGN KEY (`lang_id`) REFERENCES `cms3_langs` (`id`) ON DELETE CASCADE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
-INSERT INTO `cms_sitemap` (`id`, `domain_id`, `link`, `sort`, `priority`, `dt`, `level`, `lang_id`) VALUES
-(1,	1,	'http://madgrant.ru/',	13,	1,	'2019-06-18 15:15:30',	0,	1),
-(2,	1,	'http://madgrant.ru/obo-mne/',	0,	1,	'2019-06-10 16:39:01',	1,	1),
-(3,	1,	'http://madgrant.ru/fotogalereya/',	5,	1,	'2019-06-11 17:27:58',	1,	1),
-(4,	1,	'http://madgrant.ru/blog/',	11,	1,	'2019-06-18 14:02:58',	1,	1),
-(5,	1,	'http://madgrant.ru/kontakty/',	11,	1,	'2019-06-19 14:59:06',	1,	1),
-(6,	1,	'http://madgrant.ru/blog/kak-cveta-v-dizajne-internet-magazina-vliyayut-na-prodazhi/',	0,	0.5,	'2019-06-14 12:04:48',	2,	1),
-(7,	1,	'http://madgrant.ru/blog/kak-bystro-napolnit-i-zapustit-internet-magazin/',	14,	0.5,	'2019-06-14 12:05:14',	2,	1),
-(8,	1,	'http://madgrant.ru/blog/samostoyatelnoe-prodvizhenie-sajta-s-chego-nachat-i-kuda-dvigatsya/',	15,	0.5,	'2019-06-14 12:06:00',	2,	1),
-(26,	1,	'http://madgrant.ru/fotogalereya/zabochus-o-bezopasnosti-svoih-klientov-i-obespechivayu-nadezhnuyu-zawitu/',	10,	0.5,	'2019-06-11 16:44:33',	2,	1),
-(27,	1,	'http://madgrant.ru/fotogalereya/na-treninge-povysheniya-kvalifikacii/',	9,	0.5,	'2019-06-11 16:44:58',	2,	1),
-(28,	1,	'http://madgrant.ru/fotogalereya/ya-lyublyu-svoih-klientov-i-zabochus-o-nih/',	12,	0.5,	'2019-06-11 16:45:21',	2,	1),
-(29,	1,	'http://madgrant.ru/fotogalereya/ya-ispolzuyu-tolko-sovremennye-tehnologii/',	10,	0.5,	'2019-06-11 16:46:12',	2,	1),
-(30,	1,	'http://madgrant.ru/fotogalereya/moi-kachestva-nedostayuwie-zveno-vashego-uspeha/',	6,	0.5,	'2019-06-11 16:47:07',	2,	1),
-(31,	1,	'http://madgrant.ru/fotogalereya/luchshij-v-svoej-professionalnoj-deyatelnosti/',	4,	0.5,	'2019-06-11 16:47:45',	2,	1),
-(32,	1,	'http://madgrant.ru/fotogalereya/podpisanie-vazhnogo-dogovora/',	15,	0.5,	'2019-06-11 16:47:58',	2,	1),
-(33,	1,	'http://madgrant.ru/fotogalereya/optimiziruyu-rashody-klienta/',	11,	0.5,	'2019-06-11 16:49:09',	2,	1),
-(34,	1,	'http://madgrant.ru/fotogalereya/vstrecha-s-klientom/',	14,	0.5,	'2019-06-11 16:49:40',	2,	1),
-(35,	1,	'http://madgrant.ru/fotogalereya/rabotayu-kachestvenno-eto-pomogaet-mne-bystro-vypolnyat-svoyu-rabotu/',	4,	0.5,	'2019-06-11 16:50:06',	2,	1),
-(43,	1,	'http://madgrant.ru/novye-sposoby-zarabotka/',	15,	1,	'2019-06-18 14:02:46',	1,	1),
-(44,	1,	'http://madgrant.ru/novye-sposoby-zarabotka/zarabotok-na-fajloobmennikah/',	11,	0.5,	'2019-06-18 14:00:50',	2,	1),
-(45,	1,	'http://madgrant.ru/novye-sposoby-zarabotka/zarabotok-v-internete-na-svoem-sajte/',	16,	0.5,	'2019-06-18 14:01:34',	2,	1),
-(46,	1,	'http://madgrant.ru/novye-sposoby-zarabotka/zarabotok-na-bukmekerskih-kontorah/',	16,	0.5,	'2019-06-18 14:02:05',	2,	1);
+INSERT INTO `cms_sitemap` (`id`, `domain_id`, `link`, `sort`, `priority`, `dt`, `level`, `lang_id`, `change_frequency`) VALUES
+(1,	1,	'http://apiship.madgrant.ru/',	10,	1,	'2019-06-18 15:15:30',	0,	1,	'weekly'),
+(2,	1,	'http://apiship.madgrant.ru/obo-mne/',	11,	1,	'2019-06-10 16:39:01',	1,	1,	'weekly'),
+(3,	1,	'http://apiship.madgrant.ru/fotogalereya/',	14,	1,	'2019-06-11 17:27:58',	1,	1,	'weekly'),
+(4,	1,	'http://apiship.madgrant.ru/blog/',	0,	1,	'2019-06-18 14:02:58',	1,	1,	'weekly'),
+(5,	1,	'http://apiship.madgrant.ru/kontakty/',	0,	1,	'2019-06-19 14:59:06',	1,	1,	'weekly'),
+(6,	1,	'http://apiship.madgrant.ru/blog/kak-cveta-v-dizajne-internet-magazina-vliyayut-na-prodazhi/',	2,	0.5,	'2019-06-14 12:04:48',	2,	1,	'weekly'),
+(7,	1,	'http://apiship.madgrant.ru/blog/kak-bystro-napolnit-i-zapustit-internet-magazin/',	11,	0.5,	'2019-06-14 12:05:14',	2,	1,	'weekly'),
+(8,	1,	'http://apiship.madgrant.ru/blog/samostoyatelnoe-prodvizhenie-sajta-s-chego-nachat-i-kuda-dvigatsya/',	10,	0.5,	'2019-06-14 12:06:00',	2,	1,	'weekly'),
+(26,	1,	'http://apiship.madgrant.ru/fotogalereya/zabochus-o-bezopasnosti-svoih-klientov-i-obespechivayu-nadezhnuyu-zawitu/',	6,	0.5,	'2019-06-11 16:44:33',	2,	1,	'weekly'),
+(27,	1,	'http://apiship.madgrant.ru/fotogalereya/na-treninge-povysheniya-kvalifikacii/',	5,	0.5,	'2019-06-11 16:44:58',	2,	1,	'weekly'),
+(28,	1,	'http://apiship.madgrant.ru/fotogalereya/ya-lyublyu-svoih-klientov-i-zabochus-o-nih/',	13,	0.5,	'2019-06-11 16:45:21',	2,	1,	'weekly'),
+(29,	1,	'http://apiship.madgrant.ru/fotogalereya/ya-ispolzuyu-tolko-sovremennye-tehnologii/',	7,	0.5,	'2019-06-11 16:46:12',	2,	1,	'weekly'),
+(30,	1,	'http://apiship.madgrant.ru/fotogalereya/moi-kachestva-nedostayuwie-zveno-vashego-uspeha/',	16,	0.5,	'2019-06-11 16:47:07',	2,	1,	'weekly'),
+(31,	1,	'http://apiship.madgrant.ru/fotogalereya/luchshij-v-svoej-professionalnoj-deyatelnosti/',	10,	0.5,	'2019-06-11 16:47:45',	2,	1,	'weekly'),
+(32,	1,	'http://apiship.madgrant.ru/fotogalereya/podpisanie-vazhnogo-dogovora/',	6,	0.5,	'2019-06-11 16:47:58',	2,	1,	'weekly'),
+(33,	1,	'http://apiship.madgrant.ru/fotogalereya/optimiziruyu-rashody-klienta/',	6,	0.5,	'2019-06-11 16:49:09',	2,	1,	'weekly'),
+(34,	1,	'http://apiship.madgrant.ru/fotogalereya/vstrecha-s-klientom/',	0,	0.5,	'2019-06-11 16:49:40',	2,	1,	'weekly'),
+(35,	1,	'http://apiship.madgrant.ru/fotogalereya/rabotayu-kachestvenno-eto-pomogaet-mne-bystro-vypolnyat-svoyu-rabotu/',	16,	0.5,	'2019-06-11 16:50:06',	2,	1,	'weekly'),
+(43,	1,	'http://apiship.madgrant.ru/novye-sposoby-zarabotka/',	1,	1,	'2019-06-18 14:02:46',	1,	1,	'weekly'),
+(44,	1,	'http://apiship.madgrant.ru/novye-sposoby-zarabotka/zarabotok-na-fajloobmennikah/',	8,	0.5,	'2019-06-18 14:00:50',	2,	1,	'weekly'),
+(45,	1,	'http://apiship.madgrant.ru/novye-sposoby-zarabotka/zarabotok-v-internete-na-svoem-sajte/',	5,	0.5,	'2019-06-18 14:01:34',	2,	1,	'weekly'),
+(46,	1,	'http://apiship.madgrant.ru/novye-sposoby-zarabotka/zarabotok-na-bukmekerskih-kontorah/',	11,	0.5,	'2019-06-18 14:02:05',	2,	1,	'weekly');
+
+DROP TABLE IF EXISTS `cms_sitemap_images`;
+CREATE TABLE `cms_sitemap_images` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `location_id` int(11) NOT NULL,
+  `domain_id` int(10) unsigned NOT NULL,
+  `link` varchar(1024) NOT NULL,
+  `alt` varchar(255) DEFAULT NULL,
+  `title` varchar(255) DEFAULT NULL,
+  PRIMARY KEY (`id`),
+  KEY `location_id from cms_sitemap` (`location_id`),
+  KEY `domain_id from cms3_domains for sitemap image` (`domain_id`),
+  CONSTRAINT `domain_id from cms3_domains for sitemap image` FOREIGN KEY (`domain_id`) REFERENCES `cms3_domains` (`id`) ON DELETE CASCADE,
+  CONSTRAINT `location_id from cms_sitemap` FOREIGN KEY (`location_id`) REFERENCES `cms_sitemap` (`id`) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
 
 DROP TABLE IF EXISTS `cms_stat_domains`;
 CREATE TABLE `cms_stat_domains` (
@@ -9412,4 +9585,4 @@ CREATE TABLE `umi_event_user_history` (
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
 
--- 2020-01-21 14:33:00
+-- 2020-09-21 14:57:12
