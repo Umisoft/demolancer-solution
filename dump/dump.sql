@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Ноя 16 2020 г., 15:22
+-- Время создания: Ноя 16 2020 г., 17:30
 -- Версия сервера: 10.2.22-MariaDB
 -- Версия PHP: 7.2.15
 
@@ -184,7 +184,8 @@ INSERT INTO `cms3_data_cache` (`key`, `value`, `create_time`, `expire_time`, `en
 ('udata/vote/getRate/112771/', 'i:5;', 1601494716, 1602099516, 0, 0),
 ('usel/getPopular/', 'a:2:{s:6:\"@total\";s:1:\"7\";s:10:\"nodes:item\";a:6:{i:0;a:11:{s:3:\"@id\";s:6:\"112854\";s:5:\"@name\";s:62:\"Адаптивый интернет-магазин U-Shop Mega\";s:6:\"@price\";s:5:\"49900\";s:5:\"@link\";s:80:\"https://market.umi-cms.ru/solution/adaptivyj_internet-magazin_ushop-mega-112854/\";s:4:\"type\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"439943\";s:5:\"@name\";s:29:\"Готовое решение\";}}}s:8:\"category\";a:1:{s:10:\"nodes:item\";a:5:{i:0;a:2:{s:3:\"@id\";s:6:\"440347\";s:5:\"@name\";s:35:\"Адаптивные шаблоны\";}i:1;a:2:{s:3:\"@id\";s:6:\"439934\";s:5:\"@name\";s:12:\"Услуги\";}i:2;a:2:{s:3:\"@id\";s:6:\"439918\";s:5:\"@name\";s:16:\"Дом и быт\";}i:3;a:2:{s:3:\"@id\";s:6:\"439923\";s:5:\"@name\";s:24:\"Оборудование\";}i:4;a:2:{s:3:\"@id\";s:6:\"439935\";s:5:\"@name\";s:28:\"Электроника и IT\";}}}s:7:\"edition\";a:1:{s:10:\"nodes:item\";a:2:{i:0;a:2:{s:3:\"@id\";s:5:\"65890\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Commerce\";}i:1;a:2:{s:3:\"@id\";s:6:\"101855\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Ultimate\";}}}s:8:\"siteType\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"440324\";s:5:\"@name\";s:33:\"Интернет-магазины\";}}}s:6:\"@image\";s:103:\"https://market.umi-cms.ru/files/partnerModules/adaptivyj_internet-magazin_ushop-mega/ushopmega_main.png\";s:5:\"@rate\";i:5;s:9:\"@isModule\";b:0;}i:1;a:11:{s:3:\"@id\";s:6:\"112309\";s:5:\"@name\";s:84:\"Готовый адаптивный интернет-магазин «ProMarket 24»\";s:6:\"@price\";s:5:\"34930\";s:5:\"@link\";s:84:\"https://market.umi-cms.ru/solution/gotovyj_adaptivnyj_internet-magazin_promarket_24/\";s:4:\"type\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"439943\";s:5:\"@name\";s:29:\"Готовое решение\";}}}s:8:\"category\";a:1:{s:10:\"nodes:item\";a:2:{i:0;a:2:{s:3:\"@id\";s:6:\"440347\";s:5:\"@name\";s:35:\"Адаптивные шаблоны\";}i:1;a:2:{s:3:\"@id\";s:6:\"439930\";s:5:\"@name\";s:33:\"Сетевой маркетинг\";}}}s:7:\"edition\";a:1:{s:10:\"nodes:item\";a:3:{i:0;a:2:{s:3:\"@id\";s:5:\"65890\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Commerce\";}i:1;a:2:{s:3:\"@id\";s:5:\"65888\";s:5:\"@name\";s:29:\"Лицензия UMI.CMS Shop\";}i:2;a:2:{s:3:\"@id\";s:6:\"101855\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Ultimate\";}}}s:8:\"siteType\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"440324\";s:5:\"@name\";s:33:\"Интернет-магазины\";}}}s:6:\"@image\";s:117:\"https://market.umi-cms.ru/files/partnerModules/gotovyj_adaptivnyj_internet-magazin_promarket_24/glavnaya_stranica.jpg\";s:5:\"@rate\";i:5;s:9:\"@isModule\";b:0;}i:2;a:11:{s:3:\"@id\";s:6:\"111159\";s:5:\"@name\";s:91:\"Адаптивный сайт металлообрабаты- вающей компании\";s:6:\"@price\";s:5:\"16900\";s:5:\"@link\";s:83:\"https://market.umi-cms.ru/solution/adaptivnyj_sajt_metalloobrabatyvayuwej_kompanii/\";s:4:\"type\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"439943\";s:5:\"@name\";s:29:\"Готовое решение\";}}}s:8:\"category\";a:1:{s:10:\"nodes:item\";a:3:{i:0;a:2:{s:3:\"@id\";s:6:\"440347\";s:5:\"@name\";s:35:\"Адаптивные шаблоны\";}i:1;a:2:{s:3:\"@id\";s:6:\"439923\";s:5:\"@name\";s:24:\"Оборудование\";}i:2;a:2:{s:3:\"@id\";s:6:\"439934\";s:5:\"@name\";s:12:\"Услуги\";}}}s:7:\"edition\";a:1:{s:10:\"nodes:item\";a:5:{i:0;a:2:{s:3:\"@id\";s:5:\"65890\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Commerce\";}i:1;a:2:{s:3:\"@id\";s:5:\"65889\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Business\";}i:2;a:2:{s:3:\"@id\";s:6:\"101855\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Ultimate\";}i:3;a:2:{s:3:\"@id\";s:5:\"65888\";s:5:\"@name\";s:29:\"Лицензия UMI.CMS Shop\";}i:4;a:2:{s:3:\"@id\";s:5:\"65887\";s:5:\"@name\";s:34:\"Лицензия UMI.CMS Corporate\";}}}s:8:\"siteType\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"440325\";s:5:\"@name\";s:25:\"Обычные сайты\";}}}s:6:\"@image\";s:107:\"https://market.umi-cms.ru/files/partnerModules/adaptivnyj_sajt_metalloobrabatyvayuwej_kompanii/metall_1.png\";s:5:\"@rate\";i:5;s:9:\"@isModule\";b:0;}i:3;a:11:{s:3:\"@id\";s:6:\"111158\";s:5:\"@name\";s:88:\"Адаптивный сайт медицинского центра «МедиПроф»\";s:6:\"@price\";s:5:\"39900\";s:5:\"@link\";s:80:\"https://market.umi-cms.ru/solution/adaptivnyj_sajt_medicinskogo_centra_mediprof/\";s:4:\"type\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"439943\";s:5:\"@name\";s:29:\"Готовое решение\";}}}s:8:\"category\";a:1:{s:10:\"nodes:item\";a:3:{i:0;a:2:{s:3:\"@id\";s:6:\"440347\";s:5:\"@name\";s:35:\"Адаптивные шаблоны\";}i:1;a:2:{s:3:\"@id\";s:6:\"439922\";s:5:\"@name\";s:34:\"Красота и здоровье\";}i:2;a:2:{s:3:\"@id\";s:6:\"439934\";s:5:\"@name\";s:12:\"Услуги\";}}}s:7:\"edition\";a:1:{s:10:\"nodes:item\";a:4:{i:0;a:2:{s:3:\"@id\";s:5:\"65890\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Commerce\";}i:1;a:2:{s:3:\"@id\";s:5:\"65889\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Business\";}i:2;a:2:{s:3:\"@id\";s:6:\"101855\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Ultimate\";}i:3;a:2:{s:3:\"@id\";s:5:\"65888\";s:5:\"@name\";s:29:\"Лицензия UMI.CMS Shop\";}}}s:8:\"siteType\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"440325\";s:5:\"@name\";s:25:\"Обычные сайты\";}}}s:6:\"@image\";s:54:\"https://market.umi-cms.ru/files/a12345/medcenter_1.png\";s:5:\"@rate\";i:0;s:9:\"@isModule\";b:0;}i:4;a:11:{s:3:\"@id\";s:5:\"92968\";s:5:\"@name\";s:94:\"Адаптивный интернет-магазин натуральной косметики\";s:6:\"@price\";s:1:\"0\";s:5:\"@link\";s:85:\"https://market.umi-cms.ru/solution/adaptivnyj_internet-magazin_natural_noj_kosmetiki/\";s:4:\"type\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"439943\";s:5:\"@name\";s:29:\"Готовое решение\";}}}s:8:\"category\";a:1:{s:10:\"nodes:item\";a:2:{i:0;a:2:{s:3:\"@id\";s:6:\"439922\";s:5:\"@name\";s:34:\"Красота и здоровье\";}i:1;a:2:{s:3:\"@id\";s:6:\"440347\";s:5:\"@name\";s:35:\"Адаптивные шаблоны\";}}}s:7:\"edition\";a:1:{s:10:\"nodes:item\";a:3:{i:0;a:2:{s:3:\"@id\";s:6:\"101855\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Ultimate\";}i:1;a:2:{s:3:\"@id\";s:5:\"65888\";s:5:\"@name\";s:29:\"Лицензия UMI.CMS Shop\";}i:2;a:2:{s:3:\"@id\";s:5:\"65890\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Commerce\";}}}s:8:\"siteType\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"440324\";s:5:\"@name\";s:33:\"Интернет-магазины\";}}}s:6:\"@image\";s:68:\"https://market.umi-cms.ru/images/cms/data/solutions/s198/screen1.jpg\";s:5:\"@rate\";i:5;s:9:\"@isModule\";b:0;}i:5;a:11:{s:3:\"@id\";s:6:\"112771\";s:5:\"@name\";s:10:\"Turbo Shop\";s:6:\"@price\";s:5:\"39000\";s:5:\"@link\";s:46:\"https://market.umi-cms.ru/solution/turbo_shop/\";s:4:\"type\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"439943\";s:5:\"@name\";s:29:\"Готовое решение\";}}}s:8:\"category\";a:1:{s:10:\"nodes:item\";a:9:{i:0;a:2:{s:3:\"@id\";s:6:\"439895\";s:5:\"@name\";s:18:\"Магазинам\";}i:1;a:2:{s:3:\"@id\";s:6:\"439925\";s:5:\"@name\";s:26:\"Одежда и стиль\";}i:2;a:2:{s:3:\"@id\";s:6:\"440347\";s:5:\"@name\";s:35:\"Адаптивные шаблоны\";}i:3;a:2:{s:3:\"@id\";s:6:\"439922\";s:5:\"@name\";s:34:\"Красота и здоровье\";}i:4;a:2:{s:3:\"@id\";s:6:\"439923\";s:5:\"@name\";s:24:\"Оборудование\";}i:5;a:2:{s:3:\"@id\";s:6:\"439927\";s:5:\"@name\";s:31:\"Продукты питания\";}i:6;a:2:{s:3:\"@id\";s:6:\"439931\";s:5:\"@name\";s:10:\"Спорт\";}i:7;a:2:{s:3:\"@id\";s:6:\"439915\";s:5:\"@name\";s:30:\"Транспорт и авто\";}i:8;a:2:{s:3:\"@id\";s:6:\"439935\";s:5:\"@name\";s:28:\"Электроника и IT\";}}}s:7:\"edition\";a:1:{s:10:\"nodes:item\";a:3:{i:0;a:2:{s:3:\"@id\";s:5:\"65890\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Commerce\";}i:1;a:2:{s:3:\"@id\";s:5:\"65888\";s:5:\"@name\";s:29:\"Лицензия UMI.CMS Shop\";}i:2;a:2:{s:3:\"@id\";s:6:\"101855\";s:5:\"@name\";s:33:\"Лицензия UMI.CMS Ultimate\";}}}s:8:\"siteType\";a:1:{s:10:\"nodes:item\";a:1:{i:0;a:2:{s:3:\"@id\";s:6:\"440324\";s:5:\"@name\";s:33:\"Интернет-магазины\";}}}s:6:\"@image\";s:76:\"https://market.umi-cms.ru/images/cms/data/Market1111/ecart_turboshop_umi.png\";s:5:\"@rate\";i:5;s:9:\"@isModule\";b:0;}}}', 1601494716, 1602099516, 0, 0),
 ('ccbcce28942d0b400966ac04edfa0d47', 's:209:\"{\"_browser_name\":\"Chrome\",\"_version\":\"86.0.4240.193\",\"_platform\":\"Windows\",\"_os\":\"unknown\",\"_is_aol\":false,\"_is_mobile\":false,\"_is_tablet\":false,\"_is_robot\":false,\"_is_facebook\":false,\"_aol_version\":\"unknown\"}\";', 1605529005, 1668601005, 0, 0),
-('6b82e29e4c6d3cba27a2deb1c61e0806', 's:204:\"{\"_browser_name\":\"unknown\",\"_version\":\"unknown\",\"_platform\":\"unknown\",\"_os\":\"unknown\",\"_is_aol\":false,\"_is_mobile\":false,\"_is_tablet\":false,\"_is_robot\":false,\"_is_facebook\":false,\"_aol_version\":\"unknown\"}\";', 1605529008, 1668601008, 0, 0);
+('6b82e29e4c6d3cba27a2deb1c61e0806', 's:204:\"{\"_browser_name\":\"unknown\",\"_version\":\"unknown\",\"_platform\":\"unknown\",\"_os\":\"unknown\",\"_is_aol\":false,\"_is_mobile\":false,\"_is_tablet\":false,\"_is_robot\":false,\"_is_facebook\":false,\"_aol_version\":\"unknown\"}\";', 1605529008, 1668601008, 0, 0),
+('4cc2fef0b8b884867fdaf7c203a33328', 's:200:\"{\"_browser_name\":\"Mozilla\",\"_version\":\"5.0\",\"_platform\":\"unknown\",\"_os\":\"unknown\",\"_is_aol\":false,\"_is_mobile\":false,\"_is_tablet\":false,\"_is_robot\":false,\"_is_facebook\":false,\"_aol_version\":\"unknown\"}\";', 1605536658, 1668608658, 0, 0);
 
 -- --------------------------------------------------------
 
@@ -8914,28 +8915,28 @@ CREATE TABLE `cms3_search` (
 --
 
 INSERT INTO `cms3_search` (`rel_id`, `indextime`, `lang_id`, `domain_id`, `type_id`) VALUES
-(1, 1605529338, 1, 1, 30),
-(2, 1605529338, 1, 1, 30),
-(3, 1605529338, 1, 1, 46),
-(4, 1605529338, 1, 1, 32),
-(5, 1605529338, 1, 1, 42),
-(6, 1605529338, 1, 1, 35),
-(7, 1605529338, 1, 1, 35),
-(8, 1605529338, 1, 1, 35),
-(26, 1605529338, 1, 1, 47),
-(27, 1605529338, 1, 1, 47),
-(28, 1605529338, 1, 1, 47),
-(29, 1605529338, 1, 1, 47),
-(30, 1605529338, 1, 1, 47),
-(31, 1605529338, 1, 1, 47),
-(32, 1605529338, 1, 1, 47),
-(33, 1605529338, 1, 1, 47),
-(34, 1605529338, 1, 1, 47),
-(35, 1605529338, 1, 1, 47),
-(43, 1605529338, 1, 1, 1),
-(44, 1605529338, 1, 1, 29),
-(45, 1605529338, 1, 1, 29),
-(46, 1605529338, 1, 1, 29);
+(1, 1605536932, 1, 1, 30),
+(2, 1605536932, 1, 1, 30),
+(3, 1605536932, 1, 1, 46),
+(4, 1605536932, 1, 1, 32),
+(5, 1605536932, 1, 1, 42),
+(6, 1605536932, 1, 1, 35),
+(7, 1605536932, 1, 1, 35),
+(8, 1605536932, 1, 1, 35),
+(26, 1605536932, 1, 1, 47),
+(27, 1605536932, 1, 1, 47),
+(28, 1605536932, 1, 1, 47),
+(29, 1605536932, 1, 1, 47),
+(30, 1605536932, 1, 1, 47),
+(31, 1605536932, 1, 1, 47),
+(32, 1605536932, 1, 1, 47),
+(33, 1605536933, 1, 1, 47),
+(34, 1605536933, 1, 1, 47),
+(35, 1605536933, 1, 1, 47),
+(43, 1605536933, 1, 1, 1),
+(44, 1605536933, 1, 1, 29),
+(45, 1605536933, 1, 1, 29),
+(46, 1605536933, 1, 1, 29);
 
 -- --------------------------------------------------------
 
@@ -10180,10 +10181,10 @@ INSERT INTO `cms_reg` (`id`, `var`, `val`, `rel`) VALUES
 (309, 'keycode', 'EE291359320-F528764D624-1052CD80889', 308),
 (310, 'system_edition', 'commerce', 308),
 (311, 'previous_edition', 'commerce', 308),
-(312, 'system_version', 'dev', 308),
-(313, 'system_build', '91504', 308),
-(314, 'last_updated', '1605529038', 308),
-(315, 'system_build', '91504', 224),
+(312, 'system_version', '22', 308),
+(313, 'system_build', '91544', 308),
+(314, 'last_updated', '1605536639', 308),
+(315, 'system_build', '91544', 224),
 (316, 'install', '1559905293', 308),
 (317, 'guest_id', '619', 163),
 (318, 'create', '1559905293', 308),
@@ -10267,28 +10268,28 @@ CREATE TABLE `cms_sitemap` (
 --
 
 INSERT INTO `cms_sitemap` (`id`, `domain_id`, `link`, `sort`, `priority`, `dt`, `level`, `lang_id`, `change_frequency`) VALUES
-(1, 1, 'http://apiship.madgrant.ru/', 13, 1, '2019-06-18 15:15:30', 0, 1, 'weekly'),
-(2, 1, 'http://apiship.madgrant.ru/obo-mne/', 10, 1, '2019-06-10 16:39:01', 1, 1, 'weekly'),
-(3, 1, 'http://apiship.madgrant.ru/fotogalereya/', 10, 1, '2019-06-11 17:27:58', 1, 1, 'weekly'),
-(4, 1, 'http://apiship.madgrant.ru/blog/', 8, 1, '2019-06-18 14:02:58', 1, 1, 'weekly'),
-(5, 1, 'http://apiship.madgrant.ru/kontakty/', 4, 1, '2019-06-19 14:59:06', 1, 1, 'weekly'),
-(6, 1, 'http://apiship.madgrant.ru/blog/kak-cveta-v-dizajne-internet-magazina-vliyayut-na-prodazhi/', 11, 0.5, '2019-06-14 12:04:48', 2, 1, 'weekly'),
-(7, 1, 'http://apiship.madgrant.ru/blog/kak-bystro-napolnit-i-zapustit-internet-magazin/', 9, 0.5, '2019-06-14 12:05:14', 2, 1, 'weekly'),
-(8, 1, 'http://apiship.madgrant.ru/blog/samostoyatelnoe-prodvizhenie-sajta-s-chego-nachat-i-kuda-dvigatsya/', 3, 0.5, '2019-06-14 12:06:00', 2, 1, 'weekly'),
-(26, 1, 'http://apiship.madgrant.ru/fotogalereya/zabochus-o-bezopasnosti-svoih-klientov-i-obespechivayu-nadezhnuyu-zawitu/', 7, 0.5, '2019-06-11 16:44:33', 2, 1, 'weekly'),
-(27, 1, 'http://apiship.madgrant.ru/fotogalereya/na-treninge-povysheniya-kvalifikacii/', 5, 0.5, '2019-06-11 16:44:58', 2, 1, 'weekly'),
-(28, 1, 'http://apiship.madgrant.ru/fotogalereya/ya-lyublyu-svoih-klientov-i-zabochus-o-nih/', 6, 0.5, '2019-06-11 16:45:21', 2, 1, 'weekly'),
-(29, 1, 'http://apiship.madgrant.ru/fotogalereya/ya-ispolzuyu-tolko-sovremennye-tehnologii/', 11, 0.5, '2019-06-11 16:46:12', 2, 1, 'weekly'),
-(30, 1, 'http://apiship.madgrant.ru/fotogalereya/moi-kachestva-nedostayuwie-zveno-vashego-uspeha/', 1, 0.5, '2019-06-11 16:47:07', 2, 1, 'weekly'),
-(31, 1, 'http://apiship.madgrant.ru/fotogalereya/luchshij-v-svoej-professionalnoj-deyatelnosti/', 6, 0.5, '2019-06-11 16:47:45', 2, 1, 'weekly'),
-(32, 1, 'http://apiship.madgrant.ru/fotogalereya/podpisanie-vazhnogo-dogovora/', 11, 0.5, '2019-06-11 16:47:58', 2, 1, 'weekly'),
-(33, 1, 'http://apiship.madgrant.ru/fotogalereya/optimiziruyu-rashody-klienta/', 5, 0.5, '2019-06-11 16:49:09', 2, 1, 'weekly'),
-(34, 1, 'http://apiship.madgrant.ru/fotogalereya/vstrecha-s-klientom/', 15, 0.5, '2019-06-11 16:49:40', 2, 1, 'weekly'),
-(35, 1, 'http://apiship.madgrant.ru/fotogalereya/rabotayu-kachestvenno-eto-pomogaet-mne-bystro-vypolnyat-svoyu-rabotu/', 15, 0.5, '2019-06-11 16:50:06', 2, 1, 'weekly'),
-(43, 1, 'http://apiship.madgrant.ru/novye-sposoby-zarabotka/', 14, 1, '2019-06-18 14:02:46', 1, 1, 'weekly'),
-(44, 1, 'http://apiship.madgrant.ru/novye-sposoby-zarabotka/zarabotok-na-fajloobmennikah/', 11, 0.5, '2019-06-18 14:00:50', 2, 1, 'weekly'),
-(45, 1, 'http://apiship.madgrant.ru/novye-sposoby-zarabotka/zarabotok-v-internete-na-svoem-sajte/', 9, 0.5, '2019-06-18 14:01:34', 2, 1, 'weekly'),
-(46, 1, 'http://apiship.madgrant.ru/novye-sposoby-zarabotka/zarabotok-na-bukmekerskih-kontorah/', 11, 0.5, '2019-06-18 14:02:05', 2, 1, 'weekly');
+(1, 1, 'http://apiship.madgrant.ru/', 9, 1, '2019-06-18 15:15:30', 0, 1, 'weekly'),
+(2, 1, 'http://apiship.madgrant.ru/obo-mne/', 0, 1, '2019-06-10 16:39:01', 1, 1, 'weekly'),
+(3, 1, 'http://apiship.madgrant.ru/fotogalereya/', 9, 1, '2019-06-11 17:27:58', 1, 1, 'weekly'),
+(4, 1, 'http://apiship.madgrant.ru/blog/', 15, 1, '2019-06-18 14:02:58', 1, 1, 'weekly'),
+(5, 1, 'http://apiship.madgrant.ru/kontakty/', 16, 1, '2019-06-19 14:59:06', 1, 1, 'weekly'),
+(6, 1, 'http://apiship.madgrant.ru/blog/kak-cveta-v-dizajne-internet-magazina-vliyayut-na-prodazhi/', 12, 0.5, '2019-06-14 12:04:48', 2, 1, 'weekly'),
+(7, 1, 'http://apiship.madgrant.ru/blog/kak-bystro-napolnit-i-zapustit-internet-magazin/', 5, 0.5, '2019-06-14 12:05:14', 2, 1, 'weekly'),
+(8, 1, 'http://apiship.madgrant.ru/blog/samostoyatelnoe-prodvizhenie-sajta-s-chego-nachat-i-kuda-dvigatsya/', 14, 0.5, '2019-06-14 12:06:00', 2, 1, 'weekly'),
+(26, 1, 'http://apiship.madgrant.ru/fotogalereya/zabochus-o-bezopasnosti-svoih-klientov-i-obespechivayu-nadezhnuyu-zawitu/', 11, 0.5, '2019-06-11 16:44:33', 2, 1, 'weekly'),
+(27, 1, 'http://apiship.madgrant.ru/fotogalereya/na-treninge-povysheniya-kvalifikacii/', 2, 0.5, '2019-06-11 16:44:58', 2, 1, 'weekly'),
+(28, 1, 'http://apiship.madgrant.ru/fotogalereya/ya-lyublyu-svoih-klientov-i-zabochus-o-nih/', 13, 0.5, '2019-06-11 16:45:21', 2, 1, 'weekly'),
+(29, 1, 'http://apiship.madgrant.ru/fotogalereya/ya-ispolzuyu-tolko-sovremennye-tehnologii/', 14, 0.5, '2019-06-11 16:46:12', 2, 1, 'weekly'),
+(30, 1, 'http://apiship.madgrant.ru/fotogalereya/moi-kachestva-nedostayuwie-zveno-vashego-uspeha/', 9, 0.5, '2019-06-11 16:47:07', 2, 1, 'weekly'),
+(31, 1, 'http://apiship.madgrant.ru/fotogalereya/luchshij-v-svoej-professionalnoj-deyatelnosti/', 1, 0.5, '2019-06-11 16:47:45', 2, 1, 'weekly'),
+(32, 1, 'http://apiship.madgrant.ru/fotogalereya/podpisanie-vazhnogo-dogovora/', 9, 0.5, '2019-06-11 16:47:58', 2, 1, 'weekly'),
+(33, 1, 'http://apiship.madgrant.ru/fotogalereya/optimiziruyu-rashody-klienta/', 9, 0.5, '2019-06-11 16:49:09', 2, 1, 'weekly'),
+(34, 1, 'http://apiship.madgrant.ru/fotogalereya/vstrecha-s-klientom/', 8, 0.5, '2019-06-11 16:49:40', 2, 1, 'weekly'),
+(35, 1, 'http://apiship.madgrant.ru/fotogalereya/rabotayu-kachestvenno-eto-pomogaet-mne-bystro-vypolnyat-svoyu-rabotu/', 4, 0.5, '2019-06-11 16:50:06', 2, 1, 'weekly'),
+(43, 1, 'http://apiship.madgrant.ru/novye-sposoby-zarabotka/', 12, 1, '2019-06-18 14:02:46', 1, 1, 'weekly'),
+(44, 1, 'http://apiship.madgrant.ru/novye-sposoby-zarabotka/zarabotok-na-fajloobmennikah/', 2, 0.5, '2019-06-18 14:00:50', 2, 1, 'weekly'),
+(45, 1, 'http://apiship.madgrant.ru/novye-sposoby-zarabotka/zarabotok-v-internete-na-svoem-sajte/', 15, 0.5, '2019-06-18 14:01:34', 2, 1, 'weekly'),
+(46, 1, 'http://apiship.madgrant.ru/novye-sposoby-zarabotka/zarabotok-na-bukmekerskih-kontorah/', 1, 0.5, '2019-06-18 14:02:05', 2, 1, 'weekly');
 
 -- --------------------------------------------------------
 
