@@ -7680,7 +7680,7 @@ INSERT INTO `cms3_object_fields` (`id`, `name`, `title`, `is_locked`, `field_typ
 (414, 'ko_url', 'i18n::field-failed_pay_url', 0, 20, 0, 1, NULL, 0, 0, 'i18n::field-failed_pay_url', 0, NULL, 0, 0, 0),
 (415, 'shop_id', 'i18n::field-shop_id', 0, 20, 0, 1, NULL, 0, 0, 'Номер магазина в ЦПП. Выдается ЦПП', 1, NULL, 0, 0, 0),
 (416, 'scid', 'i18n::field-scid', 0, 20, 0, 1, NULL, 0, 0, 'Номер витрины магазина в ЦПП. Выдается ЦПП', 1, NULL, 0, 0, 0),
-(417, 'bank_id', 'i18n::field-bank_id', 0, 20, 0, 1, NULL, 0, 0, 'Код процессингового центра \"Яндекс.Деньги\"', 0, NULL, 0, 0, 0),
+(417, 'bank_id', 'i18n::field-bank_id', 0, 20, 0, 1, NULL, 0, 0, 'Код процессингового центра \"ЮMoney\"', 0, NULL, 0, 0, 0),
 (418, 'shop_password', 'i18n::field-shop_password', 0, 20, 0, 1, NULL, 0, 0, 'Секретный пароль (20 случайных символов), указывается при заключении договора', 1, NULL, 0, 0, 0),
 (419, 'paypalemail', 'i18n::field-paypalemail', 1, 20, 0, 1, NULL, 0, 0, '', 1, NULL, 0, 0, 0),
 (420, 'return_success', 'i18n::field-return_success', 1, 20, 0, 1, NULL, 0, 0, '', 1, NULL, 0, 0, 0),
