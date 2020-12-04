@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: localhost
--- Время создания: Дек 04 2020 г., 16:10
+-- Время создания: Дек 04 2020 г., 16:11
 -- Версия сервера: 10.2.22-MariaDB
 -- Версия PHP: 7.2.15
 
@@ -6055,7 +6055,7 @@ INSERT INTO `cms3_objects` (`id`, `guid`, `name`, `is_locked`, `type_id`, `owner
 (179, 'emarket-discounttype-27131', 'i18n::object-catalog_item_discount', 0, 30, 0, 1, 1559905257),
 (180, 'emarket-discounttype-27132', 'i18n::object-order_discount', 0, 30, 0, 2, 1559905257),
 (181, 'users-users-15', 'i18n::object-supervajzery', 1, 39, 0, 1, 1559905257),
-(182, 'system-supervisor', 'sv', 1, 54, 0, 1, 1601494804),
+(182, 'system-supervisor', 'sv', 1, 54, 0, 1, 1607087486),
 (183, 'emarket-discounttype-bonus', 'i18n::object-bonus-discount', 0, 30, 0, 3, 1559905257),
 (184, 'emarket-discountmodificatortype-27136', 'i18n::object-summ_percent', 0, 31, 0, 1, 1559905262),
 (185, 'emarket-store-27147', 'i18n::object-main_store', 0, 55, 0, 1, 1559905257),
@@ -7244,7 +7244,6 @@ INSERT INTO `cms3_object_content` (`obj_id`, `field_id`, `int_val`, `varchar_val
 (630, 4, NULL, NULL, '<table class=\"contact_info\">\r\n<tbody>\r\n<tr class=\"contact_info_block contact_address\">\r\n<td class=\"contact_title\">\r\n<div>Адрес:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div>Санкт-Петербург, ул. Орджоникидзе, 25</div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_time\">\r\n<td class=\"contact_title\">\r\n<div>Время работы:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div>с 9-00 до 20-00</div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_phone\">\r\n<td class=\"contact_title\">\r\n<div>Телефон:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div><a href=\"tel:+78212345678\">+7 (812) 234-56-78</a></div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_fax\">\r\n<td class=\"contact_title\">\r\n<div>WhatsApp:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div>+7 (812) 234-56-77</div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_skype\">\r\n<td class=\"contact_title\">\r\n<div>Skype:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div><a href=\"skype:stolyarova_vika\">stolyarova_vika</a></div>\r\n</td>\r\n</tr>\r\n<tr class=\"contact_info_block contact_email\">\r\n<td class=\"contact_title\">\r\n<div>Email:</div>\r\n</td>\r\n<td class=\"contact_value\">\r\n<div><a href=\"mailto:stolyarova_vika@gmail.com\">stolyarova_vika@gmail.com</a></div>\r\n</td>\r\n</tr>\r\n</tbody>\r\n</table>\r\n<div class=\"code_pre yandex_map\"><iframe frameborder=\"0\" src=\"https://yandex.ru/map-widget/v1/?um=constructor%3Ad99c67a2619bedaa9b4f611d4ea21367fa9a0f783f99b7594f64b11b6d98f849&amp;source=constructor\" width=\"100%\" height=\"400\"></iframe></div>\r\n<p style=\"text-align: justify;\">Чтобы задать вопрос заполните ниже форму обратной связи. Также можно задать вопрос, позвонив по телефону или связавшись со мной по скайпу.&nbsp;</p>', NULL, NULL, NULL),
 (686, 40, NULL, 'refund', NULL, NULL, NULL, NULL),
 (686, 111, 80, NULL, NULL, NULL, NULL, NULL),
-(182, 220, NULL, NULL, 'a:20:{s:15:\"tree-data-types\";a:1:{s:8:\"expanded\";s:15:\"{0}{3}{123}{47}\";}s:21:\"tree-emarket-delivery\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-data-guide_items\";a:2:{s:8:\"expanded\";s:3:\"{0}\";s:12:\"used-columns\";s:134:\"name[509px]|identifier[200px]|link[200px]|css_class[200px]|is_registrated[200px]|user_id[200px]|nickname[200px]|email[200px]|ip[200px]\";}s:15:\"tree-content--1\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-photoalbum-lists\";a:1:{s:8:\"expanded\";s:6:\"{0}{3}\";}s:18:\"tree-blogs20-posts\";a:2:{s:8:\"expanded\";s:6:\"{0}{8}\";s:12:\"used-columns\";s:43:\"name[400px]|publish_time[250px]|tags[582px]\";}s:18:\"tree-blogs20-blogs\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:23:\"tree-webforms-addresses\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:19:\"tree-webforms-forms\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:22:\"tree-webforms-messages\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:23:\"tree-webforms-templates\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-umiSettings-read\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-blogs20-comments\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:20:\"tree-exchange-import\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:12:\"tree_common0\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:15:\"tree-news-lists\";a:1:{s:8:\"expanded\";s:10:\"{0}{9}{43}\";}s:16:\"tree-data-guides\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:13:\"search-string\";a:2:{s:16:\"tree-data-guides\";s:12:\"социал\";s:15:\"tree-data-types\";s:12:\"способ\";}s:16:\"tree-trash-trash\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-users-users_list\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}}', NULL, NULL, NULL),
 (565, 535, 6, NULL, NULL, NULL, NULL, NULL),
 (571, 535, 5, NULL, NULL, NULL, NULL, NULL),
 (576, 535, 2, NULL, NULL, NULL, NULL, NULL),
@@ -7254,7 +7253,8 @@ INSERT INTO `cms3_object_content` (`obj_id`, `field_id`, `int_val`, `varchar_val
 (687, 66, NULL, 'promoCode', NULL, NULL, NULL, NULL),
 (687, 69, NULL, 'emarket-discountrule-850', NULL, NULL, NULL, NULL),
 (687, 68, NULL, NULL, NULL, 180, NULL, NULL),
-(687, 68, NULL, NULL, NULL, 179, NULL, NULL);
+(687, 68, NULL, NULL, NULL, 179, NULL, NULL),
+(182, 220, NULL, NULL, 'a:20:{s:15:\"tree-data-types\";a:1:{s:8:\"expanded\";s:15:\"{0}{3}{123}{47}\";}s:21:\"tree-emarket-delivery\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-data-guide_items\";a:2:{s:8:\"expanded\";s:3:\"{0}\";s:12:\"used-columns\";s:134:\"name[509px]|identifier[200px]|link[200px]|css_class[200px]|is_registrated[200px]|user_id[200px]|nickname[200px]|email[200px]|ip[200px]\";}s:15:\"tree-content--1\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-photoalbum-lists\";a:1:{s:8:\"expanded\";s:6:\"{0}{3}\";}s:18:\"tree-blogs20-posts\";a:2:{s:8:\"expanded\";s:6:\"{0}{8}\";s:12:\"used-columns\";s:43:\"name[400px]|publish_time[250px]|tags[582px]\";}s:18:\"tree-blogs20-blogs\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:23:\"tree-webforms-addresses\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:19:\"tree-webforms-forms\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:22:\"tree-webforms-messages\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:23:\"tree-webforms-templates\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-umiSettings-read\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-blogs20-comments\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:20:\"tree-exchange-import\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:12:\"tree_common0\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:15:\"tree-news-lists\";a:1:{s:8:\"expanded\";s:10:\"{0}{9}{43}\";}s:16:\"tree-data-guides\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:13:\"search-string\";a:1:{s:16:\"tree-data-guides\";s:12:\"социал\";}s:16:\"tree-trash-trash\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}s:21:\"tree-users-users_list\";a:1:{s:8:\"expanded\";s:3:\"{0}\";}}', NULL, NULL, NULL);
 
 -- --------------------------------------------------------
 
